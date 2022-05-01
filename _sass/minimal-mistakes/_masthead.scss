@@ -54,6 +54,7 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
+  font-size: 1.5em;
   // z-index: 20;
 }
 
@@ -89,6 +90,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-size: 1.2em;
 
   &--lg {
     padding-right: 2em;
