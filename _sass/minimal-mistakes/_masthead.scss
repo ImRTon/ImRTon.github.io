@@ -4,11 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
-  -webkit-animation: $intro-transition;
-  animation: $intro-transition;
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
+  // border-bottom: 1px solid $border-color;
   z-index: 20;
 
   &__inner-wrap {
@@ -35,6 +31,15 @@
 
     a {
       text-decoration: none;
+      padding: 3px 5px;
+    }
+    a:hover {
+      background-color: #00bef2;
+      color: #fff;
+      -webkit-animation: $intro-transition;
+      animation: $intro-transition;
+      -webkit-animation-delay: 0.15s;
+      animation-delay: 0.15s;
     }
   }
 }
