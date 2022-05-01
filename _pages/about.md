@@ -8,3 +8,10 @@ header:
   image: /assets/imgs/Taipei_Night.jpg
   caption: "台北夜景"
 ---
+
+# 有關於作者
+```python
+Author:
+    self.name = RTon
+    self.test = True
+```
