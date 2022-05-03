@@ -1,7 +1,10 @@
 ---
 layout: single
 title: 「論文筆記」Real-time Neural Radiance Caching for Path Tracing
-date: 2022-05-03 15:00:00
+date: 2022-05-03 8:00:00
+header:
+  overlay_image: /assets/imgs/Papers/NeuralRadianceCache/header.jpg
+  caption: "Thomas Müller | NVIDIA"
 excerpt: 關於 NVIDIA 論文 Neural Radiance Cache 的筆記
 categories:
 - 論文
@@ -12,7 +15,6 @@ tags:
 - 圖學
 - AI
 ---
-
 # Real-time Neural Radiance Caching for Path Tracing
 > 來自 [NVIDIA Research https://research.nvidia.com/publication/2021-06_real-time-neural-radiance-caching-path-tracing](https://research.nvidia.com/publication/2021-06_real-time-neural-radiance-caching-path-tracing)  
 
