@@ -2,9 +2,6 @@
 layout: single
 title: 「論文筆記」Real-time Neural Radiance Caching for Path Tracing
 date: 2022-05-03 15:00:00
-header:
-  overlay_image: /assets/imgs/Papers/NeuralRadianceCache/header.jpg
-  caption: "Thomas Müller | NVIDIA"
 excerpt: 關於 NVIDIA 論文 Neural Radiance Cache 的筆記
 categories:
 - 論文
@@ -49,7 +46,7 @@ tags:
 * 場景不能動態  
     做快取這件事情也需要花不少時間與記憶體，因此通常是透過 precomputation 來達到加速的效果，那既然是預先運算，自然場景不能是動態的。  
 * 只支援 Diffuse 材質
-* Light leakage 問題
+* Light leakage 問題  
     在角落位置會出現漏光的問題，如下圖所示。因為在角落部分，對周圍的快取做內插時，會抓到隔壁區域的光，造成漏光。  
     ![](/assets/imgs/Papers/NeuralRadianceCache/LightLeakage.jpg)  
 
