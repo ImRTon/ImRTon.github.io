@@ -100,7 +100,7 @@ $$L_s(x, w) := \int_{S^2}{f_s(x, w, w_i) L_i(x,w_i) | cos\theta_i | dw_i}$$
 ### 何時中止 ray？  
 那麼要何時把這條 Ray 給中止呢？就是當這光能量的 aera spread 已經足夠模糊掉 cache 的 inaccuracy 時，就可以中止 ray。具體公式是這樣：
 
-$$a(x_1...x_n) = \left({\sum{\sqrt{ \dfrac{||x_{i-1} - x_i||^2}{p(w_i|x_{i-1}, w) | cos\theta_i} }}}\right)^2 > C × \dfrac{{||x_0-x_1||}^2}{4 \pi cos \theta_1}$$  
+$$a(x_1...x_n) = \left({\sum_{i=2}^{n}{\sqrt{ \dfrac{||x_{i-1} - x_i||^2}{p(w_i|x_{i-1}, w) | cos\theta_i} }}}\right)^2 > C × \dfrac{ {||x_0-x_1||}^2}{4 \pi cos \theta_1}$$  
 
 > $p$：BSDF sampling PDF  
 > $\theta_i$：$w_i$ 與 Surface normal 的夾角  
