@@ -40,8 +40,11 @@ Combine a set of images into a larger image by registering, warping, resampling 
 `3D Printing`, `Electric Circuit`, `Motor Control`, `Lithium Battery`  
 改造自迪卡農滑板車 Town 7 XL，為一台輕量化可攜式的電動輔助滑板車，可折疊，全車重 < 8kg，易於攜帶。配有可抽換式電池，方便充電以及快速的電力補充。
 
-![](/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160935.jpg)
-![](/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160948.jpg)
+<figure class="half">
+    <a href="/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160935.jpg"><img src="/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160935.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160948.jpg"><img src="/assets/imgs/Projects/Hardware/ElectricScooterV4/P_20210821_160948.jpg"></a>
+    <figcaption>電動滑板車</figcaption>
+</figure>
 
 ### Battery Pack of Electric Scooter
 `3D Printing`, `Electric Circuit`, `Lithium Battery`  
