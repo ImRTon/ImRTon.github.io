@@ -22,6 +22,7 @@ toc: true
 
 ## Graphics Projects
 ### Incremental Instant Radiosity
+`Unity Engine`, `Ray Tracing`, `Radiosity`  
 > [https://github.com/ImRTon/Incremental-Instant-Radiosity](https://github.com/ImRTon/Incremental-Instant-Radiosity)
 
 <figure>
@@ -29,6 +30,8 @@ toc: true
 </figure>
 
 ### Interactive PailouModeling
+`Unity Engine`, `Procedure Modeling`  
+
 > [https://github.com/ImRTon/InteractivePailouModeling](https://github.com/ImRTon/InteractivePailouModeling)
 
 <figure>
@@ -87,5 +90,11 @@ Combine a set of images into a larger image by registering, warping, resampling 
 ![](/assets/imgs/Projects/Hardware/BatteryPackV1/P_20210821_161144.jpg)
 
 ### 3D Printed KartRider Race Car
+`3D Printing`, `3D Modeling`  
+透過 Autodesk Inventor 去建出跑跑卡丁車中的積木舒適 9 卡丁車。  
 
-
+<figure class="third">
+    <a href="/assets/imgs/Projects/Hardware/CarModel/CarFront.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/CarFront.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/CarModel/CarBack.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/CarBack.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"><img src="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"></a>
+</figure>
