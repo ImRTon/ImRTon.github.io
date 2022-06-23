@@ -10,6 +10,8 @@ header:
 author_profile: true
 toc: true
 ---
+內容目前正在施工中
+{: .notice--danger}
 
 ## AI Projects
 ### Car Detection and Removal of Landscape Scene
@@ -36,6 +38,14 @@ toc: true
 
 <figure>
 	<a href="/assets/imgs/Projects/Software/3DGame/InteractivePailouModeling.jpg"><img src="/assets/imgs/Projects/Software/3DGame/InteractivePailouModeling.jpg"></a>
+</figure>
+
+### 2D to 3D Maze
+`OpenGL`, `Visible-Surface Determination`  
+使用OpenGL 將左圖的2D 迷宮轉換成3D 版本，牆壁、顏色等都要自己計算，包含要畫在畫面上的哪個位置，且不能套用Z-Buffer 等OpenGL 3D 函式。
+
+<figure>
+	<a href="/assets/imgs/Projects/Software/Graphics/Maze.jpg"><img src="/assets/imgs/Projects/Software/Graphics/Maze.jpg"></a>
 </figure>
 
 ## VFX Projects
@@ -97,4 +107,32 @@ Combine a set of images into a larger image by registering, warping, resampling 
     <a href="/assets/imgs/Projects/Hardware/CarModel/CarFront.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/CarFront.jpg"></a>
     <a href="/assets/imgs/Projects/Hardware/CarModel/CarBack.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/CarBack.jpg"></a>
     <a href="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"><img src="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"></a>
+</figure>
+
+### 準時睡鬧鐘 (黑客松)
+`Arduino`, `24 Hours`, `黑客松`, `MakeNTU`  
+
+準時睡鬧鐘有幾項特點：  
+* 睡覺時間會響起鬧鈴，直到將手機放入充電  
+* 於睡覺時間，無法打開拿取手機  
+* 如有急迫需求使用手機，只能使用畫面上下顛倒，操作左右相反的觸碰筆  
+* 從發想到實作皆於24 小時內  
+
+在這聯網時代，手機變成什麼都可以控制，然而我們也捫心自問，手機是除了方便了生活，是否卻不方便了準時上床睡覺呢? 為了維持正常睡覺的習慣，為了不再因為一個通知而在床上划手機還不小心熬夜，這個鬧鐘會在設定的睡覺時間響起，提醒你該交出手機去睡覺，若還不照做就會一直吵你，還越來越吵煩到你受不了乖乖交出手機。怎麼知道你真的放下手機了? 這就得提到很多人使用手機的習慣⸺睡前充電，我們透過感測是否有充電，排除掉放入鬧鐘裡的東西不是手機。當放入手機並且按下右側睡覺鈕後，手機將會被關起來直到隔天設定的起床鬧鐘響起，才會退出來還給使用者。  
+在這個聯網時代，希望藉由這個「準時睡鬧鐘」，讓人們學習享受便利的同時，不會被手機所綁架而不方便最基本的睡眠。  
+<figure>
+	<a href="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock.jpg"><img src="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock.jpg"></a>
+</figure>
+
+### 動物森林 (與設計系合作之桌遊)
+`Arduino`, `3D Printing`, `3D Modeling`  
+這是幫助設計系同學專題的作品，跳過遊戲規則以及概念設計部分。總之這是一款想要藉由卡牌，結合聲音互動的遊戲。主要的機電部分就是上方這顆方形的主機，透過感應卡片的RFID 辨認動物類別，在使用者壓下卡片時，會使這個裝置發出那個動物的叫聲，藉以使孩童去認識動物。當中設計系的同學提供這個產品的遊戲概念以及美觀部分，我與另一位電機系同學負責將機電部分實作與概念優化。因而最後產出了這個作品。  
+
+<figure class="third">
+    <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_1.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_1.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_2.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_2.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/Circuit.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/Circuit.jpg"></a>
+</figure>  
+<figure>
+	<a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_3.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_3.jpg"></a>
 </figure>

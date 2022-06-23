@@ -68,13 +68,12 @@ tags:
 [https://d1qx31qr3h6wln.cloudfront.net/publications/nrc-video.mp4](https://d1qx31qr3h6wln.cloudfront.net/publications/nrc-video.mp4)  
 
 之所以會需要用到 AI 來做快取的原因在於，如果只是單純地用記憶體或是硬碟做 Radiance caching，會很耗記憶體與頻寬，且由於場景是動態的，要如何辨別快取內的資料是否需要做更新也是個大問題。畢竟如果不做更新，可能會遇到一個 ray 打出去，以前打到的地方光被遮蔽，因此光能量很低；但當場景更動後，這個位置可能光已不被遮蔽，但舊的快取資料卻還是光被遮蔽時的資訊。
-因此作者才會透過 AI 跑 online self-training，來動態更新快取內容。  
-因此不同於一般熟悉的 AI 訓練流程：  
+這邊作者用了一個很特別的方式來訓練這個 Cache，不同於一般熟悉的 AI 訓練流程：  
 1. 收集資料  
 2. 訓練  
 3. 用訓練好的模型來預測  
 
-整個 AI 模型是在 render 的過程中邊訓練邊預測的，原因就在於要讓動態的場景可以有效率的更新快取資料，pre-train 資料僅對於單一場景有用，從室內換到室外這 AI 可能就死給你看了。
+作者透過在 Render 過程中動態訓練 AI 模型並預測，來更新 cache。這麼做的好處在於可以讓動態的場景有效率的更新快取資料，pre-train 資料僅對於單一場景有用，從室內換到室外這 AI 可能就死給你看了。
 
 ### ReSTIR
 容我在多嘴提一下論文的背景資料，前面提到 Global illumination 是第一層的 direct lighting + indirect lighting。而 ReSTIR 這東西主要是在改善 direct lighting 的效率，那作者的 NRC 在第一層的 ray 計算就是透過 ReSTIR 來計算，因此後面如果有對比 Nerual Radiance Cache 啟用與否的效果，就是對比 ReSTIR VS ReSTIR + Neural Radiace Cache，有興趣可以去看看這篇[論文](https://research.nvidia.com/sites/default/files/pubs/2020-07_Spatiotemporal-reservoir-resampling/ReSTIR.pdf)。  
@@ -105,6 +104,40 @@ $$a(x_1...x_n) = \left({\sum_{i=2}^{n}{\sqrt{ \dfrac{||x_{i-1} - x_i||^2}{p(w_i|
 > $p$：BSDF sampling PDF  
 > $\theta_i$：$w_i$ 與 Surface normal 的夾角  
 > $C$：常數，0.01 為最佳  
+
+### Training
+不過因為多數的 Ray 只會打個兩三下就中止，因此這邊需要將 2~3% 的 ray 做延長來做為 AI 模型的訓練資料。這些 ray 所經過的所有 hit point 都會被作為訓練資料，丟入 Nerual Radiance Cache 內。  
+
+![](/assets/imgs/Papers/NeuralRadianceCache/NRC_TrainingData.jpg)
+
+而具體的訓練資料內容可以參考下圖，有趣的地方在於這些參數會經過一個叫做 `Position Encoding` 的技巧編碼，簡單來說就是透過傅立葉去分析這些資訊的頻率，將原始資料從三維擴展到 36 維度，來加速神經網路的收斂速度。  
+
+![](/assets/imgs/Papers/NeuralRadianceCache/TrainingDataParameters.jpg)
+
+這技巧在 [NeRF](https://www.matthewtancik.com/nerf) 這篇論文中，有比對使用了 Position Encoding 後與沒有使用的結果。  
+![](/assets/imgs/Papers/NeuralRadianceCache/PositionEncodingResults.jpg)
+
+
+有興趣的話可以參考以下幾篇論文：  
+* NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
+* Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains
+* On the Spectral Bias of Neural Networks
+* Random Features for Large-Scale Kernel Machines
+
+#### 高學習率
+可是，要在 Render 過程的每一幀時間內，訓練並且預測 AI 模型，想也知道很困難。為了加速網路收斂，作者使用了高學習率搭配多個 gradient descent 去加速收斂。不過也導致了另一個問題 - `Flickering`。
+
+解決方法也挺簡單，將 Trainging weight 與先前的 weight 取平均，避免震盪。那當然，這個取過平均的 weight 並不會拿回去做 training。  
+而取平均的方式則為 `Exponential Moving Average`，簡單來說就是離現在 frame 最接近的 weight 有著最高加權。  
+
+$$\overline W_t := \frac{1 - \alpha}{\eta_t} \cdot W_t + \alpha \cdot \eta_{t-1} \cdot \overline W_{t-1}, \text{where } \eta_t := 1 - \alpha^t $$
+
+> $$t: t^{th} \text{ frame}, \alpha = [0, 1]$$
+> $$\alpha = 0.99 \text{ 時有最佳結果}$$
+
+## 硬體最佳化
+身為 NVIDIA 的論文，當然是要來推銷一下 NVIDIA 的顯示卡 (X  
+為了讓神經網路能夠在有限的時間內完成訓練與辨識，除了前面提到的一些技巧，作者更特別自己用 CUDA 寫了一個神經網路。並針對 RTX 3090 這張顯示卡特別優化網路架構，將神經網路的大小剛好設定成能夠塞進去 Tensor Core 
 
 ```
 TODO...
