@@ -42,10 +42,9 @@ toc: true
 
 ### 2D to 3D Maze
 `OpenGL`, `Visible-Surface Determination`  
-使用OpenGL 將左圖的2D 迷宮轉換成3D 版本，牆壁、顏色等都要自己計算，包含要畫在畫面上的哪個位置，且不能套用Z-Buffer 等OpenGL 3D 函式。
-
+使用OpenGL 將左圖的2D 迷宮轉換成3D 版本，牆壁、顏色等都要自己計算，包含要畫在畫面上的哪個位置，且不能套用Z-Buffer 等OpenGL 3D 函式。  
 <figure>
-	<a href="/assets/imgs/Projects/Software/Graphics/Maze.jpg"><img src="/assets/imgs/Projects/Software/Graphics/Maze.jpg"></a>
+	<a href="/assets/imgs/Projects/Software/Graphics/Maze.png"><img src="/assets/imgs/Projects/Software/Graphics/Maze.png"></a>
 </figure>
 
 ## VFX Projects
@@ -131,7 +130,7 @@ Combine a set of images into a larger image by registering, warping, resampling 
 <figure class="third">
     <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_1.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_1.jpg"></a>
     <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_2.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_2.jpg"></a>
-    <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/Circuit.jpg"><img src="/assets/imgs/Projects/Hardware/CarModel/Circuit.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/ForestBoardGame/Circuit.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/Circuit.jpg"></a>
 </figure>  
 <figure>
 	<a href="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_3.jpg"><img src="/assets/imgs/Projects/Hardware/ForestBoardGame/AnimalForest_3.jpg"></a>
