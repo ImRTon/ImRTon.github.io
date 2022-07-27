@@ -49,15 +49,16 @@ toc: true
 
 ## VFX Projects
 ### HighDynamicRange-Imaging
-Calculate HDR image using multi-exposure images.  
 `Image Alignment using MTB`, `Solve Response Curve`, `Radiance Map`, `Tone Mapping`  
+Calculate HDR image using multi-exposure images.  
 > [https://github.com/ImRTon/HighDynamicRange-Imaging](https://github.com/ImRTon/HighDynamicRange-Imaging)  
 
 <figure>
 	<a href="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"><img src="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"></a>
 </figure>
 
-### Image Stitching
+### Image Stitching  
+`SIFT`  
 Combine a set of images into a larger image by registering, warping, resampling and blending them together.  
 > [https://github.com/ImRTon/VFX-ImageStitching](https://github.com/ImRTon/VFX-ImageStitching)  
 
