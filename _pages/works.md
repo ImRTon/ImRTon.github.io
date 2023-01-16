@@ -22,8 +22,50 @@ toc: true
 	<a href="/assets/imgs/Projects/Software/AI/110_%E5%9C%B0%E6%99%AF%E8%BB%8A%E8%BC%9B%E5%B0%88%E9%A1%8C%E6%B5%B7%E5%A0%B1.jpg"><img src="/assets/imgs/Projects/Software/AI/110_%E5%9C%B0%E6%99%AF%E8%BB%8A%E8%BC%9B%E5%B0%88%E9%A1%8C%E6%B5%B7%E5%A0%B1.jpg"></a>
 </figure>
 
-## Graphics Projects
-### Incremental Instant Radiosity
+### DLCV Projects
+#### CNN & Semantic Segmentation
+
+###
+[https://hackmd.io/@RTon/H1_Wtvcfs](https://hackmd.io/@RTon/H1_Wtvcfs)  
+
+* CNN t-SNE analysis  
+![](/assets/imgs/Projects/Software/DLCV/tSNE.png)
+* Satellite Semantic Segmentation  
+![](/assets/imgs/Projects/Software/DLCV/Semantic%20segmentation.jpg)
+
+
+#### DCGAN、WGAN、Diffusion Model & DANN
+[https://hackmd.io/@RTon/SJw676wms](https://hackmd.io/@RTon/SJw676wms)  
+* DCGAN  
+![](/assets/imgs/Projects/Software/DLCV/DCGAN.png)
+* WGAN  
+![](/assets/imgs/Projects/Software/DLCV/WGAN.png)
+* Diffusion Model on MNIST dataset  
+![](/assets/imgs/Projects/Software/DLCV/Diffusion.png)
+* DANN t-SNE Results  
+| Type | Domain | Class |
+| -------- | -------- | -------- |
+| MNIST-M → SVHN | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2SVHN_Domain.png) | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2SVHN_Class.png) |
+| MNIST-M → USPS | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2USPS_Domain.png) | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2USPS_Class.png) |
+
+#### CLIP、Image Captioning  
+[https://hackmd.io/@RTon/BkpQxeGHi](https://hackmd.io/@RTon/BkpQxeGHi)  
+
+* Image Captioning  
+| CLIPScore | 0.8990 |
+| -------- | -------- |
+| Predicted | a person standing on a beach with colorful kite . |
+| Ground Truth | a man is walking towards his kite on the ground. |
+| Image | ![](/assets/imgs/Projects/Software/DLCV/Caption_top_sourceImg.jpg) |  
+
+#### NeRF & Self-Supervised Learning  
+[https://hackmd.io/@RTon/H1YkYXjUj](https://hackmd.io/@RTon/H1YkYXjUj)  
+
+* DVGO Results  
+![](/assets/imgs/Projects/Software/DLCV/DVGO.gif)  
+
+## Graphics Projects  
+### Incremental Instant Radiosity  
 `Unity Engine`, `Ray Tracing`, `Radiosity`  
 > [https://github.com/ImRTon/Incremental-Instant-Radiosity](https://github.com/ImRTon/Incremental-Instant-Radiosity)
 
@@ -51,7 +93,8 @@ toc: true
 ### HighDynamicRange-Imaging
 `Image Alignment using MTB`, `Solve Response Curve`, `Radiance Map`, `Tone Mapping`  
 Calculate HDR image using multi-exposure images.  
-> [https://github.com/ImRTon/HighDynamicRange-Imaging](https://github.com/ImRTon/HighDynamicRange-Imaging)  
+> Introduction : [https://imrton.github.io/專案/HDRImaging/](https://imrton.github.io/%E5%B0%88%E6%A1%88/HDRImaging/)  
+> Source code : [https://github.com/ImRTon/HighDynamicRange-Imaging](https://github.com/ImRTon/HighDynamicRange-Imaging)  
 
 <figure>
 	<a href="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"><img src="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"></a>
@@ -60,7 +103,8 @@ Calculate HDR image using multi-exposure images.
 ### Image Stitching  
 `SIFT`  
 Combine a set of images into a larger image by registering, warping, resampling and blending them together.  
-> [https://github.com/ImRTon/VFX-ImageStitching](https://github.com/ImRTon/VFX-ImageStitching)  
+> Introduction : [https://ImRTon.github.io/專案/ImageStitching/](https://imrton.github.io/%E5%B0%88%E6%A1%88/ImageStitching/)  
+> Source code : [https://github.com/ImRTon/VFX-ImageStitching](https://github.com/ImRTon/VFX-ImageStitching)  
 
 <figure>
 	<a href="https://camo.githubusercontent.com/b872e03c94790592cde0ee77c5e76e41677c6dbbbc393d356060624c2d718fac/68747470733a2f2f696d6775722e636f6d2f4462434b4d6b612e6a7067"><img src="https://camo.githubusercontent.com/b872e03c94790592cde0ee77c5e76e41677c6dbbbc393d356060624c2d718fac/68747470733a2f2f696d6775722e636f6d2f4462434b4d6b612e6a7067"></a>
