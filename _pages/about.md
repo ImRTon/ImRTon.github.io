@@ -13,5 +13,5 @@ header:
 ```python
 Author:
     self.name = RTon
-    self.test = True
+    self.lab = NTUST CSIE Computer Game Animation and Graphics Lab
 ```

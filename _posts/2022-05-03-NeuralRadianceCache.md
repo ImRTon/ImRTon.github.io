@@ -22,9 +22,6 @@ tags:
 論文作者： `Thomas Müller`, `Fabrice Rousselle`, `Jan Novák`, `Alex Keller`  
 時間：2021 / 07 / 21  
 
-內容目前施工中
-{: .notice--danger}
-
 ## Direct vs Global Illumination  
 在開始談這篇論文之前，首先提一下 Direct illumination 與 Global illumination 的差異。Direct 光照又稱 local 光照，意味著光從光源打到物體後就不會再繼續往下打。而 glocal 光照則是 direct + indirect，也就是光會在場景內 bounce 非常多次 (理論上是無限次)。  
 從圖中可看到，右邊的 Global illumination 相較於左邊的 local 多了很多光反射的細節，更加接近真實。那這篇論文想達到的效果就是右邊 global illumination 的效果。目前要達到這類型的光照效果是不可能的，由於涉及了光的多次反射、折射、散射等，目前的硬體無法實時的將結果運算出來。  
@@ -127,6 +124,8 @@ $$a(x_1...x_n) = \left({\sum_{i=2}^{n}{\sqrt{ \dfrac{||x_{i-1} - x_i||^2}{p(w_i|
 #### 高學習率
 可是，要在 Render 過程的每一幀時間內，訓練並且預測 AI 模型，想也知道很困難。為了加速網路收斂，作者使用了高學習率搭配多個 gradient descent 去加速收斂。不過也導致了另一個問題 - `Flickering`。
 
+![](/assets/imgs/Papers/NeuralRadianceCache/Flickering_GIF.gif)
+
 解決方法也挺簡單，將 Trainging weight 與先前的 weight 取平均，避免震盪。那當然，這個取過平均的 weight 並不會拿回去做 training。  
 而取平均的方式則為 `Exponential Moving Average`，簡單來說就是離現在 frame 最接近的 weight 有著最高加權。  
 
@@ -137,8 +136,48 @@ $$\overline W_t := \frac{1 - \alpha}{\eta_t} \cdot W_t + \alpha \cdot \eta_{t-1}
 
 ## 硬體最佳化
 身為 NVIDIA 的論文，當然是要來推銷一下 NVIDIA 的顯示卡 (X  
-為了讓神經網路能夠在有限的時間內完成訓練與辨識，除了前面提到的一些技巧，作者更特別自己用 CUDA 寫了一個神經網路。並針對 RTX 3090 這張顯示卡特別優化網路架構，將神經網路的大小剛好設定成能夠塞進去 Tensor Core 
+為了讓神經網路能夠在有限的時間內完成訓練與辨識，除了前面提到的一些技巧，作者更特別自己用 CUDA 寫了一個神經網路。並針對 RTX 3090 這張顯示卡特別優化網路架構，將神經網路的大小剛好設定成能夠塞進去 Tensor Core。而這 Tensor Core 是 NVIDIA 在 RTX 系列顯示卡所加入的一個硬體加速器，可以將 8x8 的矩陣相乘，加速神經網路的運算速度。  
 
-```
-TODO...
-```
+**NVIDIA GeForce RTX 3090**
+| CUDA Core | 運算單元 |
+|-|-|
+| Tensor Core | 神經單元 |
+| RT Core | 光線追蹤單元 |
+
+![](/assets/imgs/Papers/NeuralRadianceCache/Ampere_architecture.png)
+
+透過這張圖可以看到，相比 TensorFlow，自己寫的神經網路可以在 RTX3090 上達到更快的效果。有興趣的話可以仔細看一下論文的方法。  
+
+![](/assets/imgs/Papers/NeuralRadianceCache/OwnCUDANetworkVSTensorFlow.jpg)
+
+## 總結
+那看到成果的部分，首先是究竟要 Train 幾個 frame，模型才能生出足夠好的效果呢？作者這邊試驗大概 8 個 frame 後，Radiance cache 的成果就已經很不錯了。  
+![](/assets/imgs/Papers/NeuralRadianceCache/Cache_train.jpg)
+
+### Cache Lag
+不過畢竟是在渲染的同時訓練，因此當場景變動時，可能會出現 Cache lag 的情形。  
+![](/assets/imgs/Papers/NeuralRadianceCache/CacheLag_GIF.gif)
+
+### 流程整理
+簡單整理一下流程  
+1. 從眼睛往螢幕像素打出射線  
+    A. 第一個碰撞點用 ReSTIR Sample  
+    B. 第二個碰撞點之後用 BSDF Sample  
+2. 在碰撞幾次後，終止射線，並將終點座標與方向輸入 Radiance Cache  
+    A. 拿出該點的 Radiance 後，依據材質算出 specular 與 diffuse color 並回傳  
+3. 延長 2~3% 的射線，將射線中的所有碰撞座標含 Radiance 拿去訓練 Radiance cache  
+4. 將 Radiance cache 的 Weight 取平均，作為之後預測用（不會拿回去訓練）  
+5. Denoise  
+
+![](/assets/imgs/Papers/NeuralRadianceCache/ScatteredRadiance.png)
+
+### 成果圖
+作者在他的個人網站有放成果圖對比，[連結在這](https://tom94.net/data/publications/mueller21realtime/interactive-viewer/)。
+
+對比其他方法，在有限時間內的渲染，NRC 的結果是最好的。
+![](/assets/imgs/Papers/NeuralRadianceCache/NRC_Res1.jpg)
+![](/assets/imgs/Papers/NeuralRadianceCache/NRC_Res2.jpg)
+
+這大概就是 Neural Radiance Cache 這篇論文的簡單介紹，論文寫的挺清楚的，也有原始碼可以查找。論文主要核心在於渲染的同時進行訓練與預測，同時藉由 CUDA 手刻網路來較高效率。  
+
+那這篇是阿湯第一次寫論文的簡介，如果錯誤歡迎留言指正我，也感謝看到這裡的客官們。  
