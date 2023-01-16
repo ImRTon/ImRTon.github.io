@@ -78,6 +78,7 @@ toc: true
 ![](/assets/imgs/Projects/Software/DLCV/DVGO.gif)  
 
 #### 3D Semantic Segmentation  
+* Post
 <figure>
 	<a href="/assets/imgs/Projects/Software/DLCV/DLCV_ntucool_final_RGB.jpg"><img src="/assets/imgs/Projects/Software/DLCV/DLCV_ntucool_final_RGB.jpg"></a>
 </figure>

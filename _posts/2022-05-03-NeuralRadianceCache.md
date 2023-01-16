@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 「論文筆記」Real-time Neural Radiance Caching for Path Tracing
-date: 2022-05-03 8:00:00
+date: 2023-01-16 8:00:00
 header:
   overlay_image: /assets/imgs/Papers/NeuralRadianceCache/header.jpg
   caption: "Thomas Müller | NVIDIA"
@@ -139,6 +139,7 @@ $$\overline W_t := \frac{1 - \alpha}{\eta_t} \cdot W_t + \alpha \cdot \eta_{t-1}
 為了讓神經網路能夠在有限的時間內完成訓練與辨識，除了前面提到的一些技巧，作者更特別自己用 CUDA 寫了一個神經網路。並針對 RTX 3090 這張顯示卡特別優化網路架構，將神經網路的大小剛好設定成能夠塞進去 Tensor Core。而這 Tensor Core 是 NVIDIA 在 RTX 系列顯示卡所加入的一個硬體加速器，可以將 8x8 的矩陣相乘，加速神經網路的運算速度。  
 
 **NVIDIA GeForce RTX 3090**
+
 | CUDA Core | 運算單元 |
 |-|-|
 | Tensor Core | 神經單元 |
@@ -178,6 +179,6 @@ $$\overline W_t := \frac{1 - \alpha}{\eta_t} \cdot W_t + \alpha \cdot \eta_{t-1}
 ![](/assets/imgs/Papers/NeuralRadianceCache/NRC_Res1.jpg)
 ![](/assets/imgs/Papers/NeuralRadianceCache/NRC_Res2.jpg)
 
-這大概就是 Neural Radiance Cache 這篇論文的簡單介紹，論文寫的挺清楚的，也有原始碼可以查找。論文主要核心在於渲染的同時進行訓練與預測，同時藉由 CUDA 手刻網路來較高效率。  
+這大概就是 Neural Radiance Cache 這篇論文的簡單介紹，論文寫的挺清楚的，也有原始碼可以查找。論文主要核心在於渲染的同時進行訓練與預測，同時藉由 CUDA 手刻網路來提高效率。  
 
 那這篇是阿湯第一次寫論文的簡介，如果錯誤歡迎留言指正我，也感謝看到這裡的客官們。  
