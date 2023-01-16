@@ -54,8 +54,9 @@ toc: true
 </figure>  
 
 * DANN t-SNE Results  
-| Type | Domain | Class |
-| -------- | -------- | -------- |
+
+| Type           | Domain                                                               | Class                                                               |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | MNIST-M → SVHN | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2SVHN_Domain.png) | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2SVHN_Class.png) |
 | MNIST-M → USPS | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2USPS_Domain.png) | ![](/assets/imgs/Projects/Software/DLCV/DANN_tSNE_M2USPS_Class.png) |
 
@@ -63,6 +64,7 @@ toc: true
 [https://hackmd.io/@RTon/BkpQxeGHi](https://hackmd.io/@RTon/BkpQxeGHi)  
 
 * Image Captioning  
+
 | CLIPScore | 0.8990 |
 | -------- | -------- |
 | Predicted | a person standing on a beach with colorful kite . |
