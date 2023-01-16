@@ -23,25 +23,36 @@ toc: true
 </figure>
 
 ### DLCV Projects
-#### CNN & Semantic Segmentation
-
-###
+#### CNN & Semantic Segmentation  
 [https://hackmd.io/@RTon/H1_Wtvcfs](https://hackmd.io/@RTon/H1_Wtvcfs)  
 
 * CNN t-SNE analysis  
-![](/assets/imgs/Projects/Software/DLCV/tSNE.png)
-* Satellite Semantic Segmentation  
-![](/assets/imgs/Projects/Software/DLCV/Semantic%20segmentation.jpg)
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/tSNE.png"><img src="/assets/imgs/Projects/Software/DLCV/tSNE.png"></a>
+</figure>  
 
+* Satellite Semantic Segmentation  
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/Semantic%20segmentation.jpg"><img src="/assets/imgs/Projects/Software/DLCV/Semantic%20segmentation.jpg"></a>
+</figure>  
 
 #### DCGAN、WGAN、Diffusion Model & DANN
 [https://hackmd.io/@RTon/SJw676wms](https://hackmd.io/@RTon/SJw676wms)  
 * DCGAN  
-![](/assets/imgs/Projects/Software/DLCV/DCGAN.png)
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/DCGAN.png"><img src="/assets/imgs/Projects/Software/DLCV/DCGAN.png"></a>
+</figure>  
+
 * WGAN  
-![](/assets/imgs/Projects/Software/DLCV/WGAN.png)
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/WGAN.png"><img src="/assets/imgs/Projects/Software/DLCV/WGAN.png"></a>
+</figure>  
+
 * Diffusion Model on MNIST dataset  
-![](/assets/imgs/Projects/Software/DLCV/Diffusion.png)
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/Diffusion.png"><img src="/assets/imgs/Projects/Software/DLCV/Diffusion.png"></a>
+</figure>  
+
 * DANN t-SNE Results  
 | Type | Domain | Class |
 | -------- | -------- | -------- |
@@ -63,6 +74,11 @@ toc: true
 
 * DVGO Results  
 ![](/assets/imgs/Projects/Software/DLCV/DVGO.gif)  
+
+#### 3D Semantic Segmentation  
+<figure>
+	<a href="/assets/imgs/Projects/Software/DLCV/DLCV_ntucool_final_RGB.jpg"><img src="/assets/imgs/Projects/Software/DLCV/DLCV_ntucool_final_RGB.jpg"></a>
+</figure>
 
 ## Graphics Projects  
 ### Incremental Instant Radiosity  
