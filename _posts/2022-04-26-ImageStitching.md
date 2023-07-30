@@ -16,6 +16,8 @@ tags:
 ---
 # 「專案筆記」Image Stitching using SIFT
 
+> Collaborate with Yen @pnf4665jds
+
 ## 成果  
 ### 象山夜景
 ![](/assets/imgs/Projects/Software/VFX/PR2_ImageStitching/Results/101.jpg)
