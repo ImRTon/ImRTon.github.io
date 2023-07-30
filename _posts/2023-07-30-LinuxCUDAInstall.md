@@ -19,8 +19,8 @@ tags:
 # Linux Ubuntu CUDA & cuDNN & NVIDIA-Docker 安裝筆記  
 ## Ubuntu 載點  
 
-Ubuntu https://www.ubuntu-tw.org/modules/tinyd0/  
-USB 製作工具 https://rufus.ie/zh_TW/  
+Ubuntu [https://www.ubuntu-tw.org/modules/tinyd0/](https://www.ubuntu-tw.org/modules/tinyd0/)  
+USB 製作工具 [https://rufus.ie/zh_TW/](https://rufus.ie/zh_TW/)  
 
 注意！安裝時，請選擇英文作為系統語言，以避免不必要的錯誤。
 {: .notice--danger}
@@ -47,7 +47,7 @@ sudo apt install nvidia-driver-VERSION_NUMBER_HERE
 ## CUDA 安裝  
 
 建議直接參考 CUDA Toolkit 官網安裝指令
-https://developer.nvidia.com/cuda-downloads
+[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 {: .notice--info}  
 
 ```bash
@@ -87,7 +87,7 @@ nvcc -V
 ## cuDNN  
 
 下載位置  
-https://developer.nvidia.com/rdp/cudnn-download  
+[https://developer.nvidia.com/rdp/cudnn-download](https://developer.nvidia.com/rdp/cudnn-download)  
 
 ### TAR Method  
 
@@ -112,7 +112,8 @@ $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn
     
 ## Docker  
 
-https://docs.docker.com/engine/install/ubuntu/
+[https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)  
+
 ### 透過 apt 安裝 Docker  
 ```bash
 sudo apt-get update
@@ -200,7 +201,7 @@ sudo usermod -aG docker $USER
 ```
 
 ## Ubuntu 防火牆
-https://footmark.com.tw/news/linux/ubuntu/ubuntu-server-ufw/
+[https://footmark.com.tw/news/linux/ubuntu/ubuntu-server-ufw/](https://footmark.com.tw/news/linux/ubuntu/ubuntu-server-ufw/)
 
 允許指定 Port 連線
 ```bash
@@ -220,6 +221,27 @@ sudo ufw status
 
 ## Linux 掛載硬碟
 https://officeguide.cc/linux-parted-create-disk-partitions-tutorial/
+
+卦載硬碟  
+```bash
+sudo mount /dev/DRIVE_PARTITION MOUNT_PATH
+```
+
+卸載硬碟  
+```bash
+sudo umount MOUNT_PATH
+```
+
+查看所有硬碟  
+```bash
+lsblk
+```
+
+查看所有磁區剩餘空間
+```bash
+df -h
+```
+
 
 ## 複製檔案並顯示進度條
 
