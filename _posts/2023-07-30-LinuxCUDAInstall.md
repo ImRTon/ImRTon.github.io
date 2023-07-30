@@ -1,3 +1,21 @@
+---
+layout: single
+title: 「筆記」Linux Ubuntu CUDA & cuDNN & NVIDIA-Docker 安裝
+date: 2023-07-30 06:25:00
+header:
+  overlay_image: /assets/imgs/Articles/CUDA_Ubuntu_Docker_Installation/CUDAandUbuntu.jpg
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  caption: "RTon | NTUST CGLab"
+excerpt: Linux Ubuntu CUDA & cuDNN & NVIDIA-Docker 安裝筆記
+categories:
+- 安裝筆記
+tags:
+- 筆記
+- Linux
+- Ubuntu
+- CUDA
+- Docker
+---
 # Linux Ubuntu CUDA & cuDNN & NVIDIA-Docker 安裝筆記  
 ## Ubuntu 載點  
 
