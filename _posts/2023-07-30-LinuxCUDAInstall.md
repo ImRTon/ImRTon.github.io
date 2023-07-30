@@ -220,27 +220,27 @@ sudo ufw status
 ```
 
 ## Linux 掛載硬碟
-https://officeguide.cc/linux-parted-create-disk-partitions-tutorial/
+[https://officeguide.cc/linux-parted-create-disk-partitions-tutorial/](https://officeguide.cc/linux-parted-create-disk-partitions-tutorial/)
 
 卦載硬碟  
 ```bash
 sudo mount /dev/DRIVE_PARTITION MOUNT_PATH
-```
+```  
 
 卸載硬碟  
 ```bash
 sudo umount MOUNT_PATH
-```
+```  
 
 查看所有硬碟  
 ```bash
 lsblk
-```
+```  
 
 查看所有磁區剩餘空間
 ```bash
 df -h
-```
+```  
 
 
 ## 複製檔案並顯示進度條
