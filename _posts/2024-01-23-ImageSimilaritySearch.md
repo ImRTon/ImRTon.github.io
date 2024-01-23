@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 「專案筆記」Image Similarity & Semantic Search Using Milvus DB
-date: 2024-01-23 8:00:00
+date: 2024-01-23 0:00:00
 header:
   overlay_image: /assets\imgs\Projects\Software\AI\ImageSimilaritySearch\Cover.png
   caption: "RTon | Skywatch Inc."
