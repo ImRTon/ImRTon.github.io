@@ -3,7 +3,7 @@ layout: single
 title: 「專案筆記」Image Similarity & Semantic Search Using Milvus DB
 date: 2024-01-23 0:00:00
 header:
-  overlay_image: /assets\imgs\Projects\Software\AI\ImageSimilaritySearch\Cover.png
+  overlay_image: /assets/imgs/Projects/Software/AI/ImageSimilaritySearch/Cover.png
   caption: "RTon | Skywatch Inc."
 excerpt: 透過 CLIP 模型與 Milvus Vector DB 實作 Image Similarity Search 與 Image Semantic Search
 categories:
