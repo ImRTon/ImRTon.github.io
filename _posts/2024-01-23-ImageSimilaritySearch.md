@@ -22,7 +22,9 @@ Image Similarity Search 顧名思義，就是輸入一張影像後，尋找與�
 ## CLIP  
 CLIP (Contrastive Language-Image Pretraining)，是一款由 OpenAI 推出的 Vision Transformer (ViT)。CLIP 透過將大量的 `文字-影像` 配對的資料集，透過對比式學習預訓練了一個 ViT 與 Text Encoder。
 
-![](/assets/imgs/Articles/CLIP/CLIP.png)
+<figure>
+	<a href="/assets/imgs/Articles/CLIP/CLIP.png"><img src="/assets/imgs/Articles/CLIP/CLIP.png"></a>
+</figure>  
 
 而由於訓練時，ViT 與 Text Encoder 是一同做對比訓練的，兩者產出的 embedding 會有著相關的特徵分佈，意味著可以透過文字來尋找影像的相似度，達成 zero-shot classification，或是本專案要做的 - Semantic Search。  
 
@@ -62,10 +64,14 @@ self.collection.release()
 ```
 
 最後成果長這樣，指定文字後，搜尋宇文字相符的圖片  
-![](/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SemanticSearch.png)
+<figure>
+	<a href="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SemanticSearch.png"><img src="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SemanticSearch.png"></a>
+</figure>  
 
 也可以上傳影像，尋找相似的圖片。  
-![](/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SimilaritySearch.png)
+<figure>
+	<a href="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SimilaritySearch.png"><img src="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SimilaritySearch.png"></a>
+</figure>  
 
 ## Milvus DB 簡易操作方式
 ### 環境建置
