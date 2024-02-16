@@ -14,6 +14,34 @@ toc: true
 {: .notice--danger}
 
 ## AI Projects
+
+### AI Smart Fast Forward  
+`C++`, `Video`  
+在 Skywatch 實習時做的專案，透過引入 AI 來提升智慧縮時的表現。智慧縮時是一個輸入 24 小時影片，可以輸出最長 10 分鐘影片的演算法。原本的演算法需要長時間的運算，並且會消酪大量記憶體。本專案藉由引入簡單的 AI，降低演算法對於雜訊的敏感度，同時最佳化演算法，讓運算速度大幅減少。  
+
+### Image Similarity & Semantic Search  
+`CLIP`, `Milvus Vector DB`  
+一個透過 CLIP 與 Milvus Vector Database 實作的簡單相似影像搜尋系統，用戶可以透過文字描述想找的圖片，或是透過上傳圖片，來尋找相似影像。  
+> Introduction : [https://imrton.github.io/專案/ImageSimilaritySearch/](https://imrton.github.io/%E5%B0%88%E6%A1%88/ImageSimilaritySearch/)  
+
+<figure class="half">
+    <a href="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SemanticSearch.png"><img src="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SemanticSearch.png"></a>
+    <a href="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SimilaritySearch.png"><img src="/assets/imgs/Projects/Software/AI/ImageSimilaritySearch/SimilaritySearch.png"></a>
+</figure>
+
+### Skywatch 產品 QA 機器人  
+`Llama 2`, `LLM`, `QLoRA`  
+挑戰將 LLM 部署於 NVIDIA GeForce RTX 2070 8GB 消費級顯示卡上，並透過 finetune，讓模型可以回答 Skywatch 的產品問題。  
+
+具體是透過 GPT4 產生有關 Skywatch 產品問答的 dataset，並透過 Supervised Fine-tuning 調整基於 Llama 2-7B 的 Taiwan-LLM-7B 模型。
+
+<figure class="half">
+    <a href="/assets/imgs/Projects/Software/AI/LLM/Skywatch-LLM/QA1.png"><img src="/assets/imgs/Projects/Software/AI/LLM/Skywatch-LLM/QA1.png"></a>
+    <a href="/assets/imgs/Projects/Software/AI/LLM/Skywatch-LLM/QA2.png"><img src="/assets/imgs/Projects/Software/AI/LLM/Skywatch-LLM/QA2.png"></a>
+</figure>
+
+
+
 ### Car Detection and Removal of Landscape Scene
 `Mask-RCNN`, `Blender`, `2D to 3D Projection`  
 建築業在做地景重建時常遇到重建出來的街道場景過多雜物，如：汽車、機車、破碎號誌竿以及樹木等。因此在重建前，先透過深度學習(Mask-RCNN) 產生這些雜物的 Mask，在重建時就不會將這些空拍圖車輛的 Pixel 資訊納入重建。得以產出乾淨的 3D 街道場景。我們透過結合深度學習與 3D 重建的相機資訊，得以反推出 3D 場景中所有車輛的 Mask，達到幾乎 99% 的辨識率。

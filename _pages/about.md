@@ -21,27 +21,28 @@ header:
 * 碩士: 國立臺灣科技大學 資訊工程所 2022/02 ~  
 * 學士: 國立臺灣科技大學 資訊工程系 2018/09 ~ 2022/01  
 
+## 經歷  
+* Skywatch Inc. 行品公司 <font color="DeepSkyBlue">**RD Intern**</font> 2023/04 ~ 2024/01  
+* NTUmaker 台大自造者社 <font color="DeepSkyBlue">**教學**</font> 2019
+
 ## 證照
-* 多益 TOEIC <font color="DeepSkyBlue">935</font> (Reading 440, Listening 495)  
+* 多益 TOEIC <font color="DeepSkyBlue">**935**</font> (Reading 440, Listening 495)  
 * 電路板設計國際能力認證 <font color="DeepSkyBlue">實用級</font>  
 * <font color="DeepSkyBlue">乙級</font> 數位電子技術士  
 * <font color="DeepSkyBlue">丙級</font> 工業電子技術士  
 
 ## 比賽
-* 2022 創創AIoT競賽 <font color="DeepSkyBlue">佳作</font>  
-* 2019 綠色生活創意設計大賽 <font color="DeepSkyBlue">佳作</font>  
+* 2022 創創AIoT競賽 <font color="DeepSkyBlue">**佳作**</font>  
+* 2019 綠色生活創意設計大賽 <font color="DeepSkyBlue">**佳作**</font>  
 
 ## 熟悉
 * Python  
   * PyTorch  
   * Diffusers, Transformers, Detectron2 Libraries  
     * Vision: CNN, ViT  
-    * Image Synthesis: Stable Diffusion, LaMa  
+    * Image Synthesis: Stable Diffusion, VAE, LaMa  
     * Detection: YOLO, Mask-RCNN, ViTDet  
 * Docker  
 * C/C++  
 * Unity  
 * Autodesk Inventor  
-
-## 社團經歷  
-* NTUmaker 台大自造者社 <font color="DeepSkyBlue">教學</font> 2019
