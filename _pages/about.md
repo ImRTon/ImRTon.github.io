@@ -26,7 +26,7 @@ header:
 * NTUmaker 台大自造者社 <font color="DeepSkyBlue">教學</font> 2019
 
 ## 證照
-* 多益 TOEIC <font color="DeepSkyBlue">935</font> (Reading 440, Listening 495)  
+* 多益 TOEIC <font color="DeepSkyBlue">935</font> (Reading 440, Listening 495) 2022  
 * 電路板設計國際能力認證 <font color="DeepSkyBlue">實用級</font>  
 * <font color="DeepSkyBlue">乙級</font> 數位電子技術士  
 * <font color="DeepSkyBlue">丙級</font> 工業電子技術士  
@@ -41,6 +41,7 @@ header:
   * Diffusers, Transformers, Detectron2 Libraries  
     * Vision: CNN, ViT  
     * Image Synthesis: Stable Diffusion, VAE, LaMa  
+    * LLM: GPT, Llama, Mistral  
     * Detection: YOLO, Mask-RCNN, ViTDet  
 * Docker  
 * C/C++  
