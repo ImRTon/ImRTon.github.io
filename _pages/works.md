@@ -20,7 +20,7 @@ toc: true
 本研究藉由 User Study，證明了本研究的方法超越了以往的 inpainting 方法，包含：LaMa、Stable Diffusion、Xie et al. 提出的漫畫 inpainting 模型。  
 > 細節待論文發布  
 
-<figure class="half">
+<figure>
     <a href="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"></a>
 </figure> 
 
