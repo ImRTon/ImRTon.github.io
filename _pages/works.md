@@ -14,6 +14,15 @@ toc: true
 {: .notice--danger}
 
 ## AI Projects
+### 漫畫修補 (Inpainting) & 漫畫復原 (Restoration)  
+`Stable Diffusion`, `VAE`  
+導入 Stable Diffusion 來進行漫畫的 inpainting 與 restoration，針對 Stable Diffusion 於漫畫上的種種問題進行修正，同時藉由 Stable Diffusion 的架構改良，讓內部的 VAE 能夠去除老化漫畫的髒污與泛黃特徵。  
+本研究藉由 User Study，證明了本研究的方法超越了以往的 inpainting 方法，包含：LaMa、Stable Diffusion、Xie et al. 提出的漫畫 inpainting 模型。  
+> 細節待論文發布  
+
+<figure class="half">
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"></a>
+</figure> 
 
 ### AI Smart Fast Forward  
 `C++`, `Video`  
