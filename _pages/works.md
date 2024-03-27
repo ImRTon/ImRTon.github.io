@@ -22,6 +22,7 @@ toc: true
 
 <figure>
     <a href="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"></a>
+    <figcaption>圖中影像來自漫畫烏龍派出所©</figcaption>
 </figure> 
 
 ### AI Smart Fast Forward  
@@ -57,6 +58,7 @@ toc: true
 <figure class="half">
     <a href="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT1.png"><img src="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT1.png"></a>
     <a href="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT2.png"><img src="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT2.png"></a>
+    <figcaption>圖中影像來自漫畫烏龍派出所©</figcaption>
 </figure>
 
 
