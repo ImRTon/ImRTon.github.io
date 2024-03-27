@@ -50,6 +50,15 @@ toc: true
 </figure>
 
 
+### 漫畫畫格 (Panel) 和對話框 (Speech Bubble) 的實例切割 (Instance Segmentation)
+`MViT`, `Detectron2`, `Instance Segmentation`  
+透過 Detectron2 訓練一個基於 MViT 的實例切割 (Instance Segmentation) 模型，用來切割漫畫中的畫格 (Panel) 和對話框 (Speech Bubble)。
+
+<figure class="half">
+    <a href="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT1.png"><img src="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT1.png"></a>
+    <a href="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT2.png"><img src="/assets/imgs/Projects/Software/AI/MangaSegmentation/MViT2.png"></a>
+</figure>
+
 
 ### Car Detection and Removal of Landscape Scene
 `Mask-RCNN`, `Blender`, `2D to 3D Projection`  
