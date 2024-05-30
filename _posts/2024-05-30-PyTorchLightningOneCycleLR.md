@@ -55,7 +55,9 @@ def configure_optimizers(self):
     return {
         "optimizer": optimizer,
         "lr_scheduler": optim.lr_scheduler.OneCycleLR(
-            optimizer, max_lr=self.hparams.lr, total_steps=self.trainer.estimated_stepping_batches),
+            optimizer, 
+            max_lr=self.hparams.lr, 
+            total_steps=self.trainer.estimated_stepping_batches),
     }
 ```
 
