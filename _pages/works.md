@@ -173,9 +173,11 @@ Combine a set of images into a larger image by registering, warping, resampling 
 > Introduction : [https://ImRTon.github.io/專案/ImageStitching/](https://imrton.github.io/%E5%B0%88%E6%A1%88/ImageStitching/)  
 > Source code : [https://github.com/ImRTon/VFX-ImageStitching](https://github.com/ImRTon/VFX-ImageStitching)  
 
-<figure>
-	<a href="https://camo.githubusercontent.com/b872e03c94790592cde0ee77c5e76e41677c6dbbbc393d356060624c2d718fac/68747470733a2f2f696d6775722e636f6d2f4462434b4d6b612e6a7067"><img src="https://camo.githubusercontent.com/b872e03c94790592cde0ee77c5e76e41677c6dbbbc393d356060624c2d718fac/68747470733a2f2f696d6775722e636f6d2f4462434b4d6b612e6a7067"></a>
+<figure class="half">
+    <a href="/assets/imgs/Projects/Software/VFX/PR2_ImageStitching/Results/101.jpg"><img src="/assets/imgs/Projects/Software/VFX/PR2_ImageStitching/Results/101.jpg"></a>
+    <a href="/assets/imgs/Projects/Software/VFX/PR2_ImageStitching/stitch/result3.png "><img src="/assets/imgs/Projects/Software/VFX/PR2_ImageStitching/stitch/result3.png"></a>
 </figure>
+
 
 ## Game Projects
 
