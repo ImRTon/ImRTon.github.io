@@ -68,7 +68,7 @@ LDM 是一種很容易 overfitting 的模型，太高的學習率容易訓練失
 具體而言，在低解析度 SGI 階段，我會將影像最長邊逐步縮小到 1024 以下，此時，進行一次一般的 Inpainting，接著放大圖片，以 0.5 的 Strength，再次進行 Inpainting，此為 FRI 階段。0.5 的 Strength 意味著 Diffusion 會從一半的時間步開始進行 Denoise，輸入的圖片會在 Noise Scheduler 加上一半強度的 Noise 後，餵給 Diffusion Model 進行 Denoise，這樣 Diffusion 就能夠依據圖片內原本的內容，稍微的做修改，達到保留主要結構，但提升解析度的目的，以下這張圖展示導入 SGIM 和未導入的差異。  
 
 <figure>
-    <a href="/assets/imgs/Projects/Software/AI/MDIM/SGIM_Diff.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/SGIM_Diff.jpg"></a>
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/SGIM_Diff.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/SGIM_Diff.jpg"></a>
 </figure>
 
 ### Symmetric VAE  
