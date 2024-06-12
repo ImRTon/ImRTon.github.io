@@ -3,8 +3,14 @@ layout: single
 title: 「專案筆記」Manga Inpainting and Restoration based on Latent Diffusion Model
 date: 2024-06-12 8:00:00
 header:
-  overlay_image: /assets/imgs/Projects/Software/VFX/PR2_ImageStitching/Results/101.jpg
-  caption: "Collaborate with Yen @pnf4665jds"
+  overlay_image: /assets/imgs/Projects/Software/AI/MDIM/Results/Inpainting_whole_page.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "My Master Thesis: Manga Inpainting and Restoration based on Latent Diffusion Model and Symmetric VAE"
+  actions:
+    - label: "Source Code"
+      url: "https://github.com/ImRTon/Manga-Diffusion-Inpaint"
+    - label: "Model"
+      url: "https://huggingface.co/ImRTon/Manga-Diffusion-Inpainting-v0.1"
 excerpt: 關於本人碩論：基於潛在擴散模型與對稱式變分自動編碼器的漫畫修補和復原之專案實作筆記
 categories:
 - 專案
