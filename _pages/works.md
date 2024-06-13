@@ -18,7 +18,7 @@ toc: true
 `Stable Diffusion`, `VAE`  
 導入 Stable Diffusion 來進行漫畫的 inpainting 與 restoration，針對 Stable Diffusion 於漫畫上的種種問題進行修正，同時藉由 Stable Diffusion 的架構改良，讓內部的 VAE 能夠去除老化漫畫的髒污與泛黃特徵。  
 本研究藉由 User Study，證明了本研究的方法超越了以往的 inpainting 方法，包含：LaMa、Stable Diffusion、Xie et al. 提出的漫畫 inpainting 模型。  
-> 細節待論文發布  
+> [Project Page](https://imrton.github.io/%E5%B0%88%E6%A1%88/MangaInpainting/)  
 
 <figure>
     <a href="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Inpainting.jpg"></a>
@@ -164,7 +164,7 @@ Calculate HDR image using multi-exposure images.
 > Source code : [https://github.com/ImRTon/HighDynamicRange-Imaging](https://github.com/ImRTon/HighDynamicRange-Imaging)  
 
 <figure>
-	<a href="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"><img src="https://github.com/ImRTon/HighDynamicRange-Imaging/raw/master/results/Elephant_mountain_101/ldr_0.2.jpg"></a>
+	<a href="/assets/imgs/Projects/Software/VFX/PR1_HDR/results/Elephant_mountain_101/ldr_0.2.jpg"><img src="/assets/imgs/Projects/Software/VFX/PR1_HDR/results/Elephant_mountain_101/ldr_0.2.jpg"></a>
 </figure>
 
 ### Image Stitching  
@@ -222,19 +222,42 @@ Combine a set of images into a larger image by registering, warping, resampling 
     <a href="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"><img src="/assets/imgs/Projects/Hardware/CarModel/CarRendered.png"></a>
 </figure>
 
-### 準時睡鬧鐘 (黑客松)
+### 準時睡鬧鐘 (黑客松 MakeNTU 2020)  
 `Arduino`, `24 Hours`, `黑客松`, `MakeNTU`  
 
 準時睡鬧鐘有幾項特點：  
-* 睡覺時間會響起鬧鈴，直到將手機放入充電  
-* 於睡覺時間，無法打開拿取手機  
-* 如有急迫需求使用手機，只能使用畫面上下顛倒，操作左右相反的觸碰筆  
-* 從發想到實作皆於24 小時內  
+* 睡覺時間會響起鬧鈴，直到將手機放入充電。  
+* 於睡覺時間，無法打開拿取手機。  
+* 如有急迫需求使用手機，只能使用畫面上下顛倒，操作左右相反的觸碰筆。  
+* 從發想到實作皆於 24 小時內。  
+* 結合睡前充電的習慣。  
 
 在這聯網時代，手機變成什麼都可以控制，然而我們也捫心自問，手機是除了方便了生活，是否卻不方便了準時上床睡覺呢? 為了維持正常睡覺的習慣，為了不再因為一個通知而在床上划手機還不小心熬夜，這個鬧鐘會在設定的睡覺時間響起，提醒你該交出手機去睡覺，若還不照做就會一直吵你，還越來越吵煩到你受不了乖乖交出手機。怎麼知道你真的放下手機了? 這就得提到很多人使用手機的習慣⸺睡前充電，我們透過感測是否有充電，排除掉放入鬧鐘裡的東西不是手機。當放入手機並且按下右側睡覺鈕後，手機將會被關起來直到隔天設定的起床鬧鐘響起，才會退出來還給使用者。  
 在這個聯網時代，希望藉由這個「準時睡鬧鐘」，讓人們學習享受便利的同時，不會被手機所綁架而不方便最基本的睡眠。  
-<figure>
-	<a href="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock.jpg"><img src="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock.jpg"></a>
+
+<figure class="third">
+    <a href="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock_intro.jpg"><img src="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/Clock_intro.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/IMG_20201011_144303.jpg"><img src="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/IMG_20201011_144303.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/IMG_20201011_144322.jpg"><img src="/assets/imgs/Projects/Hardware/SleepNowAlarmClock/IMG_20201011_144322.jpg"></a>
+</figure> 
+
+### 智慧約束帶 (創創 AIoT 2022)  
+`Arduino`, `App`  
+與台科大醫工系和長庚科大護理系同學合作的比賽，作品是智慧約束帶，以氣囊和橫向電動馬達系統，智慧束縛患者，也透過 App 管理患者的狀況。結合以上，降低壓瘡的發生。獲得創創 AIoT 2022 佳作肯定。  
+
+<figure class="half">
+    <a href="/assets/imgs/Projects/Hardware/AIoT_SmartHealth/1718254998470.jpg"><img src="/assets/imgs/Projects/Hardware/AIoT_SmartHealth/1718254998470.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/AIoT_SmartHealth/IMG20220714162119.jpg"><img src="/assets/imgs/Projects/Hardware/AIoT_SmartHealth/IMG20220714162119.jpg"></a>
+</figure>
+
+### 被窩空調 (綠色生活創意競賽)  
+`Arduino`, `App`  
+與台科大電機和設計系同學合作的比賽，作品是被窩空調，透過水冷式的床墊和棉被來降溫，取代空氣降溫的空調，能夠更加節省能源。獲得佳作肯定。  
+
+<figure class="third">
+    <a href="/assets/imgs/Projects/Hardware/EMattress/IMG20191213092136.jpg"><img src="/assets/imgs/Projects/Hardware/EMattress/IMG20191213092136.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/EMattress/IMG20191208000646.jpg"><img src="/assets/imgs/Projects/Hardware/EMattress/IMG20191208000646.jpg"></a>
+    <a href="/assets/imgs/Projects/Hardware/EMattress/IMG20191212054916.jpg"><img src="/assets/imgs/Projects/Hardware/EMattress/IMG20191212054916.jpg"></a>
 </figure>
 
 ### 動物森林 (與設計系合作之桌遊)
