@@ -78,12 +78,15 @@ LDM 是一種很容易 overfitting 的模型，太高的學習率容易訓練失
 </figure>
 
 ### Symmetric VAE  
-前面提到了 VAE 導致的失真問題，因此我提出了一個新的 VAE 架構，Symmetric VAE。之所以叫做 Symmetric VAE，是因為先前研究中，有個模型叫做 Asymmetric VAE，它藉由額外的 CNN Encoder 和增大的 Decoder，來改善失真問題。但是，這樣的做法在 512×512 的圖片中，需要大約 400MB 額外的記憶體消耗，而且還需要大量訓練才能使用。我的想法更為簡單，首先失真可以視為一種資訊的丟棄，Encoder 會學習一張影像中重要的結構，將這些重要特徵萃取出來，成為 Latent Vector。而 Decoder 擇要透過這些 Latent Vector 來重建影像。理想上，Encoder 會學習到所有重要的結構特徵，使 Decoder 能夠還原出視覺上與原本影像無差異的圖片。TODO
-這個架構是一個對稱式的 VAE，即 Encoder 和 Decoder 的架構是對稱的，這樣可以保證 Encoder 和 Decoder 的對稱性，減少了壓縮和解壓縮的失真。Symmetric VAE 的 Encoder 和 Decoder 皆為 4 層的 Convolutional Neural Network，其中 Encoder 的最後一層是一個 2D Convolutional Layer，將圖片壓縮到 2D 的 Latent Space，Decoder 的最後一層是一個 1D Convolutional Layer，將 Latent Space 解壓縮回 2D 的圖片。Symmetric VAE 的架構如下圖所示。
+前面提到了 VAE 導致的失真問題，因此我提出了一個新的 VAE 架構，Symmetric VAE。之所以叫做 Symmetric VAE，是因為先前研究中，有個模型叫做 Asymmetric VAE，它藉由額外的 CNN Encoder 和增大的 Decoder，來改善失真問題。但是，這樣的做法在 512×512 的圖片中，需要大約 400MB 額外的記憶體消耗，而且還需要大量訓練才能使用。我的想法更為簡單，首先失真可以視為一種資訊的丟棄，Encoder 會學習一張影像中重要的結構，將這些重要特徵萃取出來，成為 Latent Vector。而 Decoder 擇要透過這些 Latent Vector 來重建影像。理想上，Encoder 會學習到所有重要的結構特徵，使 Decoder 能夠還原出視覺上與原本影像無差異的圖片。而這樣的原理也被應用在老舊文件的 Restoration 上，而正好，老舊漫畫的 Restoration 也是常見的需求，因此，我提出了 Symmetric VAE，藉由 Restoration 和 VAE 架構的改進，來減少 VAE 造成的失真，同時額外達成 Restoration 的目標。  
+
+#### 架構
+Symmetric VAE 的架構如下圖，首先，影像會經過 Encoder，產生出 Latent Vector，但與一般 VAE 不同的是，我會將 Encoder 各層的特徵保留下來，接著，各層的特徵會經過 Adapter，將維度轉換到和 Decoder 各層相同。這樣做的原因在於 Encoder 和 Decoder 實際上並不是完全對稱的，因此，需要透過一個簡單的 CNN Adapter 來轉換維度。最後，Decoder 吃進轉換後的特徵和 Latent Vector，重建影像。  
+
+#### 訓練
+由於 Restoration 的需要，
 
 ## 比較
 
 
 ## References
-1. https://github.com/UWbadgers16/Panoramas
-2. https://gist.github.com/lxc-xx/7088609
