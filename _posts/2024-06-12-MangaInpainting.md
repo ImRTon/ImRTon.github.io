@@ -73,6 +73,11 @@ LDM 是一種很容易 overfitting 的模型，太高的學習率容易訓練失
 ### 高解析度 Inference  
 我觀察到，LDM 於高解析度 Inference 時，其生成的內容往往比低解析度差，因此，本研究提出了Semantic Guidance Inpainting Method (SGIM)，以 Diffusion Model 的特性，透過兩階段方法來提升 Inpainting 內容的合理性，第一階段 Semantic Guidance Inpainting (SGI)，會於低解析度進行 Inpainting，建構關鍵的結構線條；第二階段 Full Resolution Inpainting (FRI)，會以先前的低解析度結構為基礎去修復細節。避免因為高解析度特徵與訓練時不同，造成的特徵誤判，從而提高模型在高解析度下的表現。  
 
+<figure>
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/System_architecture_v8.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/System_architecture_v8.jpg"></a>
+    <figcaption>MDIM 系統架構延伸自 LDM，輸入一張彩色的漫畫圖片 x，搭配一張黑白的遮罩 m，白色標示欲除去的區域。接著，系統會將輸入圖片依據遮罩，將 Inpainting 區域的內容移除。由於本系統運作分為兩階段，SGI 與 FRI。在第一階段，會以低解析度進行 SGI，取得影像的大致結構。接著，於第二階段 FRI 以第一階段的結果於原始解析度再進行 Inpainting，在這個階段，Diffusion 會依據輸入的圖片結構，稍微修改圖片與增強圖片的細節，並微調圖片結構。最後，得到輸出成果。範例輸入圖片擷取自漫畫烏龍派出所©秋本治。</figcaption>
+</figure>
+
 具體而言，在低解析度 SGI 階段，我會將影像最長邊逐步縮小到 1024 以下，此時，進行一次一般的 Inpainting，接著放大圖片，以 0.5 的 Strength，再次進行 Inpainting，此為 FRI 階段。0.5 的 Strength 意味著 Diffusion 會從一半的時間步開始進行 Denoise，輸入的圖片會在 Noise Scheduler 加上一半強度的 Noise 後，餵給 Diffusion Model 進行 Denoise，這樣 Diffusion 就能夠依據圖片內原本的內容，稍微的做修改，達到保留主要結構，但提升解析度的目的，以下這張圖展示導入 SGIM 和未導入的差異。  
 
 <figure>
