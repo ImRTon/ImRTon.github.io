@@ -26,10 +26,8 @@ tags:
 - Inpainting
 - Restoration
 ---
-內容目前正在施工中
-{: .notice--danger}
 
-# 「專案筆記」Manga Inpainting and Restoration  
+# 「專案筆記」Manga Inpainting and Restoration based on Latent Diffusion Model and Symmetric VAE   
 漫畫是種獨特的藝術創作，內容由純黑白的網點 (Screentone) 與結構線 (Structural Line) 構成，營造出不同於彩色和灰階的獨特視覺效果及意義。而漫畫，多數源自於日本，因此在其他國家，例如台灣，想要享受漫畫的樂趣，就必須透過翻譯。然而，現有的漫畫翻譯僅針對文字部分，對於漫畫中的狀聲詞皆不會翻譯。而對於互動式的漫畫，現有的[系統](https://www.ithome.com.tw/newstream/107288)也僅限於將對話框 (Speech Bubble) 依據閱讀順序放大，互動性有限。我認為這是因為目前不存在一個足夠強的 inpainting 系統，能夠將對話框底下的內容以合理的像素填上，假如存在一個足夠好的 inpainting 系統，將可以達成狀聲詞的翻譯和使對話框能夠依據閱讀順序逐一出現。除此之外，對於老舊的漫畫翻譯，還需要大量人力去將掃描下來紙張中的黃化和老化瑕疵移除，因此，本研究提出了 Manga Diffusion Inpainting Model (MDIM)，能夠對漫畫進行 inpainting 和 restoration。
 
 ## 問題  
@@ -47,8 +45,6 @@ LDM 將 Diffusion 從 Pixel Space 轉移到 Latent Space 中，這樣的方法�
 <figure>
     <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/VAE_diff.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/VAE_diff.jpg"></a>
 </figure>
-
-### 
 
 ## 模型
 本研究提出的 Manga Diffusion Inpainting Model (MDIM) 模型延伸自 Latent Diffusion Model (LDM)，即大家所熟知的 Stable Diffusion，但如前一章節所提到的，LDM 無法應付漫畫，因此本研究針對這些問題，對 LDM 做了訓練上和架構上的修改之後，提出了 MDIM。以下說明 MDIM 確切的修改。  
@@ -196,6 +192,72 @@ User Study 的結果如下表所示，可以看到本研究的方法除了在漫
 <figure>
     <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_KimagureOrangeRoad_2_3_068.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_KimagureOrangeRoad_2_3_068.jpg"></a>
     <figcaption>以不同 Inpainting 方法，於漫畫【古靈精怪©松本泉】上進行 Inpainting 的成果。</figcaption>
+</figure>
+
+## Restoration 比較
+為了驗證本研究所提出的 SVAE 於漫畫 Restoration 上的表現，本研究以 FID、LPIPS 與 PSNR 評估指標，對比 Symmetric VAE，以下簡稱為 SVAE，和針對文件設計的 Document Enhancement Generative Adversarial Networks，以下簡稱為DE-GAN，於漫畫 Restoration 上的表現。此次對比使用的是來自論文作者的程式碼，使用預設參數和模型，以文件二值化模式進行處理。由於，目前並沒有針對老舊漫畫 Restoration 的研究，因此，本論文僅能使用針對老舊文件的方法來進行比較。此外，為了量化本論文所使用的測試資料黃化程度，本論文將使用國際照明協會 (CIE) 提出的 CIE2000標準 Delta E，定義為 ${\Delta} E^*_{00}$ 來計算色差。透過將各漫畫與 Ground Truth 之間的${\Delta} E^*_{00}$，以及各漫畫與自身灰階圖之間的 ${\Delta} E^*_{00}$ 紀錄於表。可以得到同時考量影像亮度與顏色，以及指考量顏色差異的色差值，此數值越小，代表色差越小。   
+
+| 評估指標 | 漫畫           | 亮度和色差 ${\Delta} E^*_{00}$ | 色差 ${{\Delta} E^*_{00}}$ | DE-GAN | Ours   |
+|----------|----------------|------------------------------|------------------------|--------|--------|
+| FID      | 天使日誌       | 11.94                        | 1.907                  | 101.0  | 25.59  |
+|          | 名偵探柯南     | 19.13                        | 0.813                  | 222.7  | 13.79  |
+|          | 古靈精怪       | 15.46                        | 2.794                  | 214.2  | 35.37  |
+|          | 烏龍派出所     | 11.29                        | 1.303                  | 149.4  | 16.64  |
+|          | 美食偵探王     | 16.75                        | 1.020                  | 153.0  | 14.10  |
+|          | 小鮒魚的學校   | 10.01                        | 0.169                  | 163.3  | 17.23  |
+|          | 天才柳澤教授   | 10.91                        | 1.067                  | 109.5  | 11.40  |
+|          | 天體戰士桑雷德 | 14.50                        | 1.144                  | 261.4  | 31.15  |
+|          | 向陽之樹       | 21.96                        | 0.871                  | 109.1  | 6.239  |
+|          | 全部           | -                            | -                      | 118.0  | 14.51  |
+| PSNR     | 天使日誌       | 11.94                        | 1.907                  | 12.27  | 23.04  |
+|          | 名偵探柯南     | 19.13                        | 0.813                  | 9.707  | 26.40  |
+|          | 古靈精怪       | 15.46                        | 2.794                  | 9.633  | 23.04  |
+|          | 烏龍派出所     | 11.29                        | 1.303                  | 9.915  | 24.12  |
+|          | 美食偵探王     | 16.75                        | 1.020                  | 9.671  | 24.28  |
+|          | 小鮒魚的學校   | 10.01                        | 0.169                  | 9.734  | 26.91  |
+|          | 天才柳澤教授   | 10.91                        | 1.067                  | 9.974  | 24.50  |
+|          | 天體戰士桑雷德 | 14.50                        | 1.144                  | 9.932  | 24.50  |
+|          | 向陽之樹       | 21.96                        | 0.871                  | 9.903  | 29.60  |
+|          | 全部           | -                            | -                      | 9.903  | 25.16  |
+| LPIPS    | 天使日誌       | 11.94                        | 1.907                  | 0.1757 | 0.1741 |
+|          | 名偵探柯南     | 19.13                        | 0.813                  | 0.2615 | 0.0795 |
+|          | 古靈精怪       | 15.46                        | 2.794                  | 0.2567 | 0.2304 |
+|          | 烏龍派出所     | 11.29                        | 1.303                  | 0.2491 | 0.0733 |
+|          | 美食偵探王     | 16.75                        | 1.020                  | 0.2572 | 0.0772 |
+|          | 小鮒魚的學校   | 10.01                        | 0.169                  | 0.2604 | 0.0360 |
+|          | 天才柳澤教授   | 10.91                        | 1.067                  | 0.2565 | 0.0819 |
+|          | 天體戰士桑雷德 | 14.50                        | 1.144                  | 0.2557 | 0.1055 |
+|          | 向陽之樹       | 21.96                        | 0.871                  | 0.2587 | 0.0653 |
+|          | 全部           | -                            | -                      | 0.2587 | 0.1026 |
+
+### Metrics
+為了透過評估指標來客觀評量本研究的方法於漫畫 Restoration 上的效果，我從經長久存放的老舊漫畫中，蒐集了 9 部 10 卷有著較為嚴重，且不同程度老化的漫畫，每卷隨機選擇 10 頁，共準備了 90 筆的測試資料，並以 600 DPI 掃描下來的紙本頁面做為模型輸入。而 Ground Truth 則使用專家經由 Adobe Photoshop 影像處理復原的輸入影像，影像處理包含轉換為灰階、表面模糊移除紙張瑕疵和使用修復筆刷去除雜點，最後透過顏色映射，將多數的像素映射到全黑和全白，以評估指標評估 Ground Truth 與模型輸出的差異。
+
+#### 1. FID
+[Fréchet inception distance (FID)](https://arxiv.org/abs/1706.08500) 是一種常用的生成式模型評估指標，用來評估生成式模型生成影像集與真實影像集之間的分佈差異。其計算方式是透過計算 Inception 模型中，多維度特徵向量的 Frechet Distance，來評估真實影像與生成影像之間的相似度。該距離越小，代表兩組圖片的相似度越高。從結果看來，本研究的方法在 FID 指標上，碾壓了 DE-GAN，但是需要注意到，FID 通常需要數千張的影像評估，才能有比較精確的分數，本研究的測試資料並沒有那麼多，因此結果僅供參考。
+
+#### 2. PSNR
+[Peak Signal-to-Noise Ratio (PSNR)](https://lightning.ai/docs/torchmetrics/stable/image/peak_signal_noise_ratio.html) 是一種用來評估影像重建或是壓縮品質的客觀指標，其表示了訊號最大的可能功率與影響其表示精度之間的比值。PSNR 能夠反應訊號有用之訊息強度與雜訊之間的比例，其數值越高，代表雜訊影響越低，表現越好。從結果看來，本研究的 SVAE 毫無懸念的贏過了 DE-GAN。  
+
+#### 3. LPIPS
+[Learned Perceptual Image Patch Similarity (LPIPS)](http://richzhang.github.io/PerceptualSimilarity/) 是一種透過神經網路，計算影像相似度的評估指標。其計算方式是計算 AlexNet 或是 VGG16 的特徵層相似度，更能精確反應符合人類視覺的相似度指標，其分數越低，代表影像的相似度越高。從結果看來，本研究的方法強於 DE-GAN。 
+
+### 結果示例
+最後，為了視覺話本研究於漫畫 Restoration 的成果，本論文將展示本研究將 Restoration 應用於測試資料漫畫上的效果。
+
+成果如下，為了避免圖片太大，影響網站速度，以下圖片有進行 50% 的縮放和 JPEG 壓縮。  
+
+<figure>
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_KimagureOrangeRoad_2_1_21.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_KimagureOrangeRoad_2_1_21.jpg"></a>
+    <figcaption>以不同 Restoration 方法，於漫畫【古靈精怪©松本泉】上進行 Restoration 的成果。</figcaption>
+</figure>
+<figure>
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_Kochikame_186_1_11.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_Kochikame_186_1_11.jpg"></a>
+    <figcaption>以不同 Restoration 方法，於漫畫【烏龍派出所©秋本治】上進行 Restoration 的成果。</figcaption>
+</figure>
+<figure>
+    <a href="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_ProfessorRyusakuYanagisawaTheGenius_31_213_3.jpg"><img src="/assets/imgs/Projects/Software/AI/MDIM/Results/Page_Restoration_ProfessorRyusakuYanagisawaTheGenius_31_213_3.jpg"></a>
+    <figcaption>以不同 Restoration 方法，於漫畫【天才柳澤教授©山下和美】上進行 Restoration 的成果。</figcaption>
 </figure>
 
 
