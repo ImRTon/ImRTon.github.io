@@ -30,6 +30,8 @@ tags:
 # 「專案筆記」Manga Inpainting and Restoration based on Latent Diffusion Model and Symmetric VAE   
 漫畫是種獨特的藝術創作，內容由純黑白的網點 (Screentone) 與結構線 (Structural Line) 構成，營造出不同於彩色和灰階的獨特視覺效果及意義。而漫畫，多數源自於日本，因此在其他國家，例如台灣，想要享受漫畫的樂趣，就必須透過翻譯。然而，現有的漫畫翻譯僅針對文字部分，對於漫畫中的狀聲詞皆不會翻譯。而對於互動式的漫畫，現有的[系統](https://www.ithome.com.tw/newstream/107288)也僅限於將對話框 (Speech Bubble) 依據閱讀順序放大，互動性有限。我認為這是因為目前不存在一個足夠強的 inpainting 系統，能夠將對話框底下的內容以合理的像素填上，假如存在一個足夠好的 inpainting 系統，將可以達成狀聲詞的翻譯和使對話框能夠依據閱讀順序逐一出現。除此之外，對於老舊的漫畫翻譯，還需要大量人力去將掃描下來紙張中的黃化和老化瑕疵移除，因此，本研究提出了 Manga Diffusion Inpainting Model (MDIM)，能夠對漫畫進行 inpainting 和 restoration。
 
+{% include video id="PCW5zbPLYaE" provider="youtube" %}
+
 ## 問題  
 ### 空白處畫頭  
 直接將 LDM 用在漫畫 Inpainting 上有著很多的問題，其中最明顯的莫過於填補頭，如下圖，可看到 LDM 會想盡辦法將人物的頭補到空白區域。你或許會想，這應該是資料有 bias 的關係吧？畢竟漫畫的圖片大多都有人物，但是，實際透過較少人物的漫畫資料集訓練後，雖然不再繼續畫頭，但是空白區域仍然出現了一堆奇怪的圖騰呀！  
