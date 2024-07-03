@@ -39,10 +39,15 @@ class MLP(L.LightningModule):
         optimizer = optim.AdamW(self.parameters(), self.hparams.lr)
         return {
             "optimizer": optimizer,
-            "lr_scheduler": optim.lr_scheduler.OneCycleLR(
-                optimizer, 
-                max_lr=self.hparams.lr, 
-                steps_per_epoch=len(train_loader)),
+            "lr_scheduler": {
+                "scheduler": "lr_scheduler": optim.lr_scheduler.OneCycleLR(
+                    optimizer, 
+                    max_lr=self.hparams.lr, 
+                    steps_per_epoch=len(train_loader)
+                ),
+                "interval": "step", # Important! OneCycleLR is called at every step
+            }
+            
         }
 ```
 
@@ -55,10 +60,14 @@ def configure_optimizers(self):
     optimizer = optim.AdamW(self.parameters(), self.hparams.lr)
     return {
         "optimizer": optimizer,
-        "lr_scheduler": optim.lr_scheduler.OneCycleLR(
-            optimizer, 
-            max_lr=self.hparams.lr, 
-            total_steps=self.trainer.estimated_stepping_batches),
+        "lr_scheduler": {
+            "scheduler": optim.lr_scheduler.OneCycleLR(
+                optimizer, 
+                max_lr=self.hparams.max_lr, 
+                total_steps=self.trainer.estimated_stepping_batches,
+            ),
+            "interval": "step", # Important! OneCycleLR is called at every step
+        }
     }
 ```
 
