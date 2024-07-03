@@ -17,7 +17,7 @@ tags:
 - PyTorch Lightning
 ---
 
-# PyTorch Lightning with OneCycleLR Scheduler
+# 如何在 PyTorch Lightning 共享 DataModule 和 Model 之間的參數
 PyTorch Lightning 將許多訓練過程中的細節封裝起來，讓使用者可以專注在模型的設計與訓練上。而尤其搭配 `LightningCLI` 使用時，更是方便。然而，當我們在 PyTorch Lightning 中，想要於多個模組間共享參數時，你會發現似乎做不到？  
 
 [前一篇文章](https://imrton.github.io/%E7%AD%86%E8%A8%98/PyTorchLightningOneCycleLR/)中，我們提到了在使用 OneCycleLR Scheduler 時，如何取得 dataloader 的長度，但是不可能 PyTorchLightning 都只能透過這種特定的參數去取得吧？。因此，這次我們將討論更廣泛的問題，即如何在 `LightningCLI` 中，共享參數。
