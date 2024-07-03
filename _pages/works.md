@@ -10,8 +10,6 @@ header:
 author_profile: true
 toc: true
 ---
-內容目前正在施工中
-{: .notice--danger}
 
 ## AI Projects
 ### 漫畫修補 (Inpainting) & 漫畫復原 (Restoration)  
