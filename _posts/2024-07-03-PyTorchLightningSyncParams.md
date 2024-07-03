@@ -4,6 +4,7 @@ title: 「筆記」PyTorch Lightning 於 DataModule 和 Model 之間共享參數
 date: 2024-07-03 04:49:00
 header:
   overlay_image: /assets/imgs/Articles/PyTorchLightning/Header.png
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "RTon"
 excerpt: 於 PyTorch Lightning 中，多個模組間共享參數的問題
 categories:

@@ -4,6 +4,7 @@ title: 「筆記」PyTorch Lightning with OneCycleLR Scheduler
 date: 2024-05-30 10:35:00
 header:
   overlay_image: /assets/imgs/Articles/PyTorchLightning/Header.png
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "RTon"
 excerpt: 於 PyTorch Lightning 中使用 OneCycleLR Scheduler 遇到的尷尬問題
 categories:
