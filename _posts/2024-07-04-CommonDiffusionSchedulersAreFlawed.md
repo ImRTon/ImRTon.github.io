@@ -4,6 +4,7 @@ title: 「論文筆記」Common Diffusion Noise Schedules and Sample Steps are F
 date: 2024-07-04 8:00:00
 header:
   overlay_image: /assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/Header.webp
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Shanchuan Lin, Bingchen Liu, Jiashi Li, Xiao Yang | ByteDance Inc."
 excerpt: 關於論文 Common Diffusion Noise Schedules and Sample Steps are Flawed 的筆記
 categories:
@@ -37,8 +38,8 @@ tags:
 
 <figure class="third">
     <a href="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SDXL.jpg"><img src="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SDXL.jpg"></a>
-    <a href="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SD3.jpg"><img src="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SD3.jpg"></a>
-    <a href="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_Emu.jpg"><img src="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_Emu.jpg"></a>
+    <a href="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SD3.webp"><img src="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_SD3.webp"></a>
+    <a href="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_Emu.jpeg"><img src="/assets/imgs/Papers/CommonDiffusionSchedulersAreFlawed/PureWhite_Emu.jpeg"></a>
     <figcaption>Prompt "Pure white"，最左邊的是 Stability AI SDXL 的生成結果；中間是 Stability AI Stable Diffusion 3 的生成結果；右邊是 Meta AI Emu 的生成結果。</figcaption>
 </figure> 
 
