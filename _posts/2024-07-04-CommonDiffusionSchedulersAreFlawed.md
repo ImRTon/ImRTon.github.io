@@ -18,9 +18,9 @@ tags:
 # Common Diffusion Noise Schedules and Sample Steps are Flawed
 > 來自 [ByteDance Inc. https://arxiv.org/abs/2305.08891](https://arxiv.org/abs/2305.08891)  
 
-關鍵字：`AI`, `Diffusion`, `Noise Schedulor`, `Image Synthesis` 
+關鍵字：`AI`, `Diffusion`, `Noise Schedulor`, `Image Synthesis`  
 論文作者： `Shanchuan Lin`, `Bingchen Liu`, `Jiashi Li`, `Xiao Yang`  
-期刊：`WACV`
+期刊：`WACV`  
 時間：2023 / 05 / 15  
 
 ## 簡介
