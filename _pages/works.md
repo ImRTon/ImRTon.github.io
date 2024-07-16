@@ -23,6 +23,14 @@ toc: true
     <figcaption>圖中影像來自漫畫烏龍派出所©</figcaption>
 </figure> 
 
+### Ti-MAE & Transformer  
+`Ti-MAE`, `Time Series`, `Transformer`  
+Ti-MAE 是一個基於 Transformer 的時間序列分類模型，透過隨機生成遮罩進行自監督學習。此專案參考了論文，從頭於 `PyTorch Lightning` 實作了 `Transformer` 和 `Ti-MAE` 模型。 
+
+尚未完成模型訓練之測試 {: .notice}
+
+> [Source Code](https://github.com/ImRTon/TiMAE-Lightning)
+
 ### AI Smart Fast Forward  
 `C++`, `Video`  
 在 Skywatch 實習時做的專案，透過引入 AI 來提升智慧縮時的表現。智慧縮時是一個輸入 24 小時影片，可以輸出最長 10 分鐘影片的演算法。原本的演算法需要長時間的運算，並且會消酪大量記憶體。本專案藉由引入簡單的 AI，降低演算法對於雜訊的敏感度，同時最佳化演算法，讓運算速度大幅減少。  
