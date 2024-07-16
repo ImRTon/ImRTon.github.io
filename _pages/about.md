@@ -7,6 +7,7 @@ permalink: /about/
 header:
   overlay_image: /assets/imgs/Taipei_Night.jpg
   caption: "台北夜景"
+comments: false
 ---
 
 # 有關於作者
