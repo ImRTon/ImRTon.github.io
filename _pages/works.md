@@ -26,9 +26,7 @@ comments: false
 
 ### Ti-MAE & Transformer  
 `Ti-MAE`, `Time Series`, `Transformer`  
-Ti-MAE 是一個基於 Transformer 的時間序列分類模型，透過隨機生成遮罩進行自監督學習。此專案參考了論文，從頭於 `PyTorch Lightning` 實作了 `Transformer` 和 `Ti-MAE` 模型。 
-
-尚未完成模型訓練之測試 {: .notice}
+Ti-MAE 是一個基於 Transformer 的時間序列分類模型，透過隨機生成遮罩進行自監督學習。此專案參考了論文，從頭於 `PyTorch Lightning` 實作了 `Transformer` 和 `Ti-MAE` 模型。
 
 > [Source Code](https://github.com/ImRTon/TiMAE-Lightning)
 
