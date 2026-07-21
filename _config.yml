@@ -1,0 +1,268 @@
+# Theme Settings
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+remote_theme             : "mmistakes/minimal-mistakes@4.28.0"
+minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
+
+# Site Settings
+locale                   : "zh-TW"
+direction                : # "ltr" (default), "rtl"
+title                    : "ImRTon's coding space"
+title_separator          : "-"
+subtitle                 :
+name                     : "阿湯"
+description              : "An amazing website."
+url                      : "https://ImRTon.github.io"
+baseurl                  :
+repository               : "ImRTon/ImRTon.github.io"
+teaser                   :
+logo                     :
+masthead_title           :
+breadcrumbs              : true
+words_per_minute         : 200
+enable_copy_code_button  :
+copyright                :
+copyright_url            :
+
+# Comments
+comments:
+  provider               : "disqus"
+  disqus:
+    shortname            : "imrtongitpage"
+  discourse:
+    server               :
+  facebook:
+    appid                :
+    num_posts            :
+    colorscheme          :
+  utterances:
+    theme                :
+    issue_term           :
+  giscus:
+    repo_id              :
+    category_name        :
+    category_id          :
+    discussion_term      :
+    reactions_enabled    :
+    theme                :
+    strict               :
+    input_position       :
+    emit_metadata        :
+    lang                 :
+    lazy                 :
+  staticman:
+    branch               :
+    endpoint             :
+reCaptcha:
+  siteKey                :
+  secret                 :
+
+# Feed / Search
+atom_feed:
+  path                   :
+  hide                   :
+search                   : true
+search_full_content      :
+search_provider          :
+lunr:
+  search_within_pages    :
+algolia:
+  application_id         :
+  index_name             :
+  search_only_api_key    :
+  powered_by             :
+google:
+  search_engine_id       :
+  instant_search         :
+
+# SEO Related
+google_site_verification : "antdi_c6U4zoMbSk22RJT0_b2ss-cZWj8GUC6QB1Mmk"
+bing_site_verification   :
+naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
+og_image_alt             :
+social:
+  type                   :
+  name                   :
+  links:
+
+# Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : "G-BPQ3FQZHDL"
+    anonymize_ip         : false
+
+# Site Author
+author:
+  name             : "阿湯"
+  avatar           : "/assets/imgs/RTon.jpg"
+  bio              : "NTUST CSIE Computer Graphics Lab"
+  location         : "Taiwan"
+  email            : "col360785@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ImRTon"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+  quiet_deps: true
+  silence_deprecations: ['import']
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Etc/GMT+8
+paginate: 5
+paginate_path: /page:num/
+
+# Pagination with jekyll-paginate-v2
+pagination:
+  enabled: false
+  debug: false
+  collection: 'posts'
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: ''
+  trail:
+    before: 2
+    after: 2
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+      date_format: "%Y-%m-%d"
+      toc: true

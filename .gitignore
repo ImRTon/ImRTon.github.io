@@ -1,0 +1,23 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# Node
+node_modules/
+
+# IDEs
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
