@@ -13,6 +13,14 @@ comments: false
 ---
 
 ## AI Projects
+### LSSGen (ICCVW 2025)
+`Diffusion`, `Flow Models`, `DiT`  
+運用 Diffusion coarse to fine 特性，將前期擴散轉換到低解析度加速 inference。
+<figure>
+    <a href="/assets/imgs/Papers/LSSGen/DynaFlow_v3.jpg"><img src="/assets/imgs/Papers/LSSGen/DynaFlow_v3.jpg"></a>
+</figure> 
+
+> [Project Page](https://imrton.github.io/%E8%AB%96%E6%96%87/LSSGen/)  
 ### 漫畫修補 (Inpainting) & 漫畫復原 (Restoration)  
 `Stable Diffusion`, `VAE`  
 導入 Stable Diffusion 來進行漫畫的 inpainting 與 restoration，針對 Stable Diffusion 於漫畫上的種種問題進行修正，同時藉由 Stable Diffusion 的架構改良，讓內部的 VAE 能夠去除老化漫畫的髒污與泛黃特徵。  
