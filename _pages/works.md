@@ -124,9 +124,9 @@ feature_row:
 `C++`, `Video`  
 在 Skywatch 實習期間，為可將 24 小時影片濃縮成最長 10 分鐘的智慧縮時演算法導入 AI，降低其對雜訊的敏感度；並同步最佳化運算流程，改善執行時間與記憶體消耗。
 
-<div class="work-card__metric" aria-label="將二十四小時影片縮短至最長十分鐘">
-  <strong>24h</strong><span>video</span><i aria-hidden="true">→</i><strong>≤10min</strong><span>highlight</span>
-</div>
+<figure>
+    <a href="/assets/imgs/Projects/Software/SmartFF/SmartFF.jpg"><img src="/assets/imgs/Projects/Software/SmartFF/SmartFF.jpg" alt="AI Smart Fast Forward"></a>
+</figure>
 </article>
 
 <article class="work-card" markdown="1">
