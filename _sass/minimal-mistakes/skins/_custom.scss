@@ -283,7 +283,7 @@ $base0f: #b18a3d !default;
 
     .works-spotlight {
       display: grid;
-      grid-template-columns: minmax(18rem, 0.8fr) minmax(28rem, 1.2fr);
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
       gap: clamp(2rem, 5vw, 5rem);
       align-items: center;
       margin: 2rem 0 5rem;
@@ -792,7 +792,7 @@ $base0f: #b18a3d !default;
     // ---- LSSGen research spotlight ----
     .works-spotlight--lssgen {
       position: relative;
-      grid-template-columns: minmax(20rem, 0.9fr) minmax(26rem, 1.1fr);
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
       margin-top: 0;
       isolation: isolate;
       background:
