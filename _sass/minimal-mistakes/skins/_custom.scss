@@ -191,41 +191,91 @@ $base0f: #b18a3d !default;
     }
 
     .feature__item {
+      --feature-accent: #7fe9ff;
+      --feature-accent-rgb: 127, 233, 255;
+      --feature-label: "01 / AI RESEARCH";
       display: flex;
+      position: relative;
       float: none;
       width: auto;
       min-width: 0;
       margin: 0;
-      border: 1px solid $border-color;
+      border: 1px solid rgba(var(--feature-accent-rgb), 0.2);
       border-radius: var(--works-radius);
-      background: var(--works-surface);
+      background: #0b1720;
+      box-shadow: 0 1rem 2rem rgba(#02121f, 0.12);
       overflow: hidden;
-      transition: transform 180ms ease, box-shadow 180ms ease;
+      isolation: isolate;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 1.25rem;
+        bottom: 0;
+        left: 1.25rem;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--feature-accent), transparent);
+        opacity: 0.55;
+      }
 
       &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 45px rgba(#000, 0.1);
+        transform: translateY(-6px);
+        border-color: rgba(var(--feature-accent-rgb), 0.48);
+        box-shadow: 0 1.5rem 3rem rgba(#02121f, 0.24), 0 0 2rem rgba(var(--feature-accent-rgb), 0.08);
       }
 
       .archive__item-teaser {
+        position: relative;
         aspect-ratio: 16 / 9;
         height: auto;
         max-height: none;
         margin: 0;
-        background: var(--works-surface-strong);
+        background: #071219;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(180deg, transparent 42%, #0b1720 100%),
+            linear-gradient(135deg, rgba(var(--feature-accent-rgb), 0.12), transparent 55%);
+          pointer-events: none;
+        }
       }
 
       .archive__item-teaser img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        filter: saturate(0.82) brightness(0.82);
+        transition: transform 450ms ease, filter 450ms ease;
+      }
+
+      &:hover .archive__item-teaser img {
+        transform: scale(1.045);
+        filter: saturate(1) brightness(0.95);
       }
 
       .archive__item-body {
         display: flex;
+        position: relative;
         flex: 1;
         flex-direction: column;
         padding: 1.25rem;
+        background:
+          radial-gradient(100% 70% at 100% 0%, rgba(var(--feature-accent-rgb), 0.1), transparent 70%),
+          #0b1720;
+
+        &::before {
+          content: var(--feature-label);
+          margin-bottom: 0.65rem;
+          color: var(--feature-accent);
+          font-size: 0.62rem;
+          font-weight: 800;
+          letter-spacing: 0.13em;
+        }
       }
 
       .archive__item,
@@ -241,17 +291,62 @@ $base0f: #b18a3d !default;
 
       .archive__item-title {
         margin-top: 0;
+        color: #f4fbff;
         font-size: 1.25rem;
+        letter-spacing: -0.025em;
       }
 
       .archive__item-excerpt {
-        color: var(--works-ink-soft);
+        color: rgba(#e5f4fa, 0.68);
         font-size: 0.9rem;
+      }
+
+      .btn {
+        border: 1px solid rgba(var(--feature-accent-rgb), 0.25);
+        background: rgba(var(--feature-accent-rgb), 0.12);
+        color: var(--feature-accent);
+        transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+
+        &:hover {
+          background: var(--feature-accent);
+          color: #081218;
+          transform: translateX(0.15rem);
+        }
       }
     }
 
-    .feature__item:nth-child(2) .archive__item-teaser img {
-      object-fit: contain;
+    .feature__item:nth-child(2) {
+      --feature-accent: #c1d7b6;
+      --feature-accent-rgb: 193, 215, 182;
+      --feature-label: "02 / PERSONAL PROJECTS";
+
+      .archive__item-body {
+        background:
+          radial-gradient(100% 80% at 100% 0%, rgba(#8b5826, 0.2), transparent 68%),
+          #17140f;
+      }
+
+      .archive__item-teaser::after {
+        background:
+          linear-gradient(180deg, transparent 38%, #17140f 100%),
+          linear-gradient(135deg, rgba(#8b5826, 0.2), rgba(#c1d7b6, 0.04) 60%);
+      }
+
+      .archive__item-teaser img {
+        object-position: center 42%;
+      }
+    }
+
+    .feature__item:nth-child(3) {
+      --feature-accent: #d5b9ff;
+      --feature-accent-rgb: 213, 185, 255;
+      --feature-label: "03 / VISUAL & INTERACTIVE";
+    }
+
+    .feature__item:nth-child(4) {
+      --feature-accent: #ffc777;
+      --feature-accent-rgb: 255, 199, 119;
+      --feature-label: "04 / HARDWARE & PROTOTYPING";
     }
 
     .works-intro {
@@ -346,6 +441,7 @@ $base0f: #b18a3d !default;
       height: auto;
       max-height: 42rem;
       object-fit: contain;
+      border-radius: 0.85rem;
       filter: drop-shadow(0 1.5rem 2rem rgba(#000, 0.35));
     }
 
@@ -789,6 +885,124 @@ $base0f: #b18a3d !default;
       }
     }
 
+    .works-spotlight--expense {
+      position: relative;
+      margin-top: -2rem;
+      border: 1px solid rgba(#c1d7b6, 0.16);
+      background:
+        radial-gradient(80% 110% at 90% 10%, rgba(#8b5826, 0.24), transparent 58%),
+        linear-gradient(135deg, #12110d, #211b13);
+      box-shadow: 0 2rem 4rem rgba(#100c07, 0.32);
+
+      &::before {
+        content: "$";
+        position: absolute;
+        right: 3%;
+        bottom: -0.22em;
+        color: rgba(#c1d7b6, 0.035);
+        font-size: clamp(12rem, 28vw, 27rem);
+        font-weight: 800;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      .works-spotlight__body,
+      .works-spotlight__media {
+        position: relative;
+      }
+
+      .works-kicker {
+        color: #c1d7b6;
+      }
+
+      h3 {
+        color: #f5eee3;
+      }
+
+      .works-spotlight__tags code {
+        border: 1px solid rgba(#c1d7b6, 0.14);
+        background: rgba(#c1d7b6, 0.09);
+        color: #d9e8d1;
+      }
+
+      .btn {
+        background: #c1d7b6;
+        color: #1c2917;
+
+        &:hover {
+          background: #d9e8d1;
+        }
+      }
+    }
+
+    .works-spotlight__features {
+      display: grid;
+      gap: 0.65rem;
+      margin: 1.5rem 0 0;
+
+      span {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+        color: rgba(#f5eee3, 0.78);
+        font-size: 0.84rem;
+        font-weight: 650;
+      }
+
+      span::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: #c1d7b6;
+        box-shadow: 0 0 0 0.28rem rgba(#c1d7b6, 0.1);
+      }
+    }
+
+    .works-spotlight__media--expense {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.45rem, 1vw, 0.85rem);
+      min-height: 32rem;
+
+      a {
+        border-radius: clamp(0.7rem, 1.5vw, 1.15rem);
+        overflow: hidden;
+        filter: drop-shadow(0 1.5rem 2rem rgba(#000, 0.42));
+        transition: transform 260ms ease;
+      }
+
+      a:nth-child(1) {
+        transform: translateY(-1rem);
+      }
+
+      a:nth-child(2) {
+        transform: translateY(1.75rem);
+      }
+
+      a:nth-child(3) {
+        transform: translateY(-0.25rem);
+      }
+
+      a:nth-child(1):hover {
+        transform: translateY(-1.35rem) scale(1.025);
+      }
+
+      a:nth-child(2):hover {
+        transform: translateY(1.4rem) scale(1.025);
+      }
+
+      a:nth-child(3):hover {
+        transform: translateY(-0.6rem) scale(1.025);
+      }
+
+      img {
+        max-height: none;
+        transform: none;
+        filter: none;
+      }
+    }
+
     // ---- LSSGen research spotlight ----
     .works-spotlight--lssgen {
       position: relative;
@@ -938,6 +1152,10 @@ $base0f: #b18a3d !default;
       grid-template-columns: 1fr;
     }
 
+    .works-spotlight__media--expense {
+      min-height: 30rem;
+    }
+
     .works-spotlight__body {
       max-width: 48rem;
     }
@@ -1004,6 +1222,27 @@ $base0f: #b18a3d !default;
 
       .works-spotlight__media a:last-child img {
         transform: translateY(1rem);
+      }
+
+      .works-spotlight--expense {
+        margin-top: -1rem;
+      }
+
+      .works-spotlight__media--expense {
+        gap: 0.4rem;
+        min-height: 19rem;
+
+        a:nth-child(1) {
+          transform: translateY(-0.4rem);
+        }
+
+        a:nth-child(2) {
+          transform: translateY(0.75rem);
+        }
+
+        a:nth-child(3) {
+          transform: none;
+        }
       }
 
       .work-card figure.half,

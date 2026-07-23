@@ -307,6 +307,26 @@ feature_row:
   </div>
 </article>
 
+<article class="works-spotlight works-spotlight--expense">
+  <div class="works-spotlight__body">
+    <p class="works-kicker">Independent Android Product</p>
+    <h3>Expense Bucket</h3>
+    <p class="works-spotlight__tags"><code>Agentic Tools</code> <code>Kotlin</code> <code>Jetpack Compose</code> <code>Room</code> <code>CameraX</code> <code>ML Kit</code></p>
+    <p>一款為日常消費與旅行打造的 Android 記帳 App。從消費通知與電子發票 QR Code 自動建立可編輯草稿，減少輸入負擔，同時保留每一筆交易的最終控制權。</p>
+    <div class="works-spotlight__features" aria-label="Expense Bucket 核心功能">
+      <span>通知與發票自動擷取</span>
+      <span>信用卡回饋額度追蹤</span>
+      <span>旅遊專案與多幣別預算</span>
+    </div>
+    <p class="works-spotlight__cta"><a href="https://github.com/ImRTon/Expense-Bucket" class="btn">Source Code</a></p>
+  </div>
+  <div class="works-spotlight__media works-spotlight__media--expense">
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00009.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00009.jpg" alt="Expense Bucket 月預算水位與交易紀錄首頁"></a>
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00004.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00004.jpg" alt="從 Android 通知自動偵測消費並等待使用者確認"></a>
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00008.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00008.jpg" alt="Expense Bucket 旅遊專案的多幣別預算與消費分類"></a>
+  </div>
+</article>
+
 <div class="works-section-head" id="visual-interactive">
   <div>
     <p class="works-kicker">03 / Visual & Interactive</p>
