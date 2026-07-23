@@ -2,7 +2,7 @@
 title: "作品集"
 layout: single
 classes: works-page
-excerpt: "從研究到落地，從軟體到硬體，我不只會用 AI，我能夠開發 AI。"
+excerpt: "從研究到產品，從演算法到實體原型，把想法做成真正能運作的作品。"
 sitemap: true
 permalink: /works/
 header:
