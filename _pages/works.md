@@ -2,7 +2,7 @@
 title: "作品集"
 layout: single
 classes: works-page
-excerpt: "從研究到落地，從軟體到硬體，我不只會用 AI，我能夠開發 AI。"
+excerpt: "從研究到產品，從演算法到實體原型，把想法做成真正能運作的作品。"
 sitemap: true
 permalink: /works/
 header:
@@ -124,9 +124,9 @@ feature_row:
 `C++`, `Video`  
 在 Skywatch 實習期間，為可將 24 小時影片濃縮成最長 10 分鐘的智慧縮時演算法導入 AI，降低其對雜訊的敏感度；並同步最佳化運算流程，改善執行時間與記憶體消耗。
 
-<div class="work-card__metric" aria-label="將二十四小時影片縮短至最長十分鐘">
-  <strong>24h</strong><span>video</span><i aria-hidden="true">→</i><strong>≤10min</strong><span>highlight</span>
-</div>
+<figure>
+    <a href="/assets/imgs/Projects/Software/SmartFF/SmartFF.jpg"><img src="/assets/imgs/Projects/Software/SmartFF/SmartFF.jpg" alt="AI Smart Fast Forward"></a>
+</figure>
 </article>
 
 <article class="work-card" markdown="1">
@@ -304,6 +304,26 @@ feature_row:
   <div class="works-spotlight__media">
     <a href="https://raw.githubusercontent.com/ImRTon/Hows-The-Weather/main/docs/Image00005.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Hows-The-Weather/main/docs/Image00005.jpg" alt="展開的出門決策卡與雷達地圖"></a>
     <a href="https://raw.githubusercontent.com/ImRTon/Hows-The-Weather/main/docs/Image00007.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Hows-The-Weather/main/docs/Image00007.jpg" alt="未來一小時累積雨量與地圖"></a>
+  </div>
+</article>
+
+<article class="works-spotlight works-spotlight--expense">
+  <div class="works-spotlight__body">
+    <p class="works-kicker">Independent Android Product</p>
+    <h3>Expense Bucket</h3>
+    <p class="works-spotlight__tags"><code>Agentic Tools</code> <code>Kotlin</code> <code>Jetpack Compose</code> <code>Room</code> <code>CameraX</code> <code>ML Kit</code></p>
+    <p>一款為日常消費與旅行打造的 Android 記帳 App。從消費通知與電子發票 QR Code 自動建立可編輯草稿，減少輸入負擔，同時保留每一筆交易的最終控制權。</p>
+    <div class="works-spotlight__features" aria-label="Expense Bucket 核心功能">
+      <span>通知與發票自動擷取</span>
+      <span>信用卡回饋額度追蹤</span>
+      <span>旅遊專案與多幣別預算</span>
+    </div>
+    <p class="works-spotlight__cta"><a href="https://github.com/ImRTon/Expense-Bucket" class="btn">Source Code</a></p>
+  </div>
+  <div class="works-spotlight__media works-spotlight__media--expense">
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00009.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00009.jpg" alt="Expense Bucket 月預算水位與交易紀錄首頁"></a>
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00004.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00004.jpg" alt="從 Android 通知自動偵測消費並等待使用者確認"></a>
+    <a href="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00008.jpg"><img src="https://raw.githubusercontent.com/ImRTon/Expense-Bucket/main/docs/Image00008.jpg" alt="Expense Bucket 旅遊專案的多幣別預算與消費分類"></a>
   </div>
 </article>
 
