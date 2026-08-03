@@ -1135,6 +1135,136 @@ $base0f: #b18a3d !default;
         text-align: center;
       }
     }
+
+    // ---- DuoAD research spotlight ----
+    .works-spotlight--duoad {
+      position: relative;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      margin-top: -2rem;
+      isolation: isolate;
+      border: 1px solid rgba(#ffbd66, 0.2);
+      background:
+        radial-gradient(85% 110% at 94% 8%, rgba(#ff9d42, 0.2), transparent 58%),
+        radial-gradient(70% 90% at 0% 100%, rgba(#55dff7, 0.14), transparent 62%),
+        linear-gradient(135deg, rgba(#111a20, 0.97), rgba(#201811, 0.96));
+      box-shadow: 0 2rem 4rem rgba(#120c07, 0.4);
+
+      &::before {
+        content: "[CLS]";
+        position: absolute;
+        right: -0.04em;
+        bottom: -0.18em;
+        z-index: -1;
+        color: rgba(#ffbd66, 0.035);
+        font-family: monospace;
+        font-size: clamp(7rem, 19vw, 18rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.1em;
+        pointer-events: none;
+      }
+
+      .works-kicker {
+        color: #ffbd66;
+      }
+
+      h3 {
+        background: linear-gradient(115deg, #ffffff 18%, #ffbd66 62%, #80eaff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .works-spotlight__tags code {
+        border: 1px solid rgba(#ffbd66, 0.15);
+        background: rgba(#ffbd66, 0.09);
+        color: #ffe0b5;
+      }
+
+      .works-spotlight__metrics {
+        gap: 1rem;
+        border-color: rgba(#ffbd66, 0.2);
+      }
+
+      .works-metric strong span {
+        color: #ffbd66;
+      }
+
+      .btn {
+        background: #ffbd66;
+        color: #24170b;
+
+        &:hover {
+          background: #ffd59d;
+        }
+      }
+
+      .btn--duoad-secondary {
+        border: 1px solid rgba(#ffcf8c, 0.42);
+        background: rgba(#fff, 0.06);
+        color: #ffe0b5;
+
+        &:hover {
+          border-color: #ffbd66;
+          background: rgba(#ffbd66, 0.14);
+          color: #fff4e3;
+        }
+      }
+    }
+
+    .works-spotlight--duoad .works-spotlight__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+
+      .btn {
+        margin-right: 0;
+      }
+    }
+
+    .works-spotlight__media--duoad {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 0;
+
+      figure {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0.55rem;
+        border: 1px solid rgba(#ffcf8c, 0.14);
+        border-radius: 1rem;
+        background: rgba(#080b0d, 0.46);
+      }
+
+      img,
+      a:last-child img {
+        width: 100%;
+        max-height: none;
+        border-radius: 0.65rem;
+        transform: none;
+        filter: drop-shadow(0 1rem 2rem rgba(#000, 0.42));
+        transition: transform 260ms ease;
+      }
+
+      a:hover img {
+        transform: scale(1.012);
+      }
+
+      figcaption {
+        margin: 0.55rem 0 0.1rem;
+        color: rgba(#ffe9ca, 0.7);
+        font-size: 0.72rem;
+        text-align: center;
+
+        code {
+          background: none;
+          color: #80eaff;
+        }
+      }
+    }
   }
 }
 
@@ -1148,7 +1278,8 @@ $base0f: #b18a3d !default;
       grid-template-columns: 1fr;
     }
 
-    .works-spotlight--lssgen {
+    .works-spotlight--lssgen,
+    .works-spotlight--duoad {
       grid-template-columns: 1fr;
     }
 

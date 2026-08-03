@@ -55,6 +55,44 @@ feature_row:
 
 <h3 class="works-subhead">AI Research & Engineering</h3>
 
+<article class="works-spotlight works-spotlight--duoad">
+  <div class="works-spotlight__body">
+    <p class="works-kicker">Research Preprint · arXiv 2026</p>
+    <h3>DuoAD</h3>
+    <p class="works-spotlight__tags"><code>Anomaly Detection</code> <code>Few-Shot</code> <code>Training-Free</code> <code>Vision Transformer</code></p>
+    <p>運用 ViT <code>[CLS]</code> token 的雙重特性：以穩定的全域語意自動選擇 augmentation，再用對局部異常敏感的 attention logits 強化瑕疵定位。只需少量正常樣本，不訓練、不逐類別調參，也能達到 Few-Shot Anomaly Detection SOTA。</p>
+    <div class="works-spotlight__metrics" aria-label="DuoAD 關鍵數據">
+      <div class="works-metric">
+        <strong>1 / 4<span>-shot</span></strong>
+        <small>Few-shot<br>industrial inspection</small>
+      </div>
+      <div class="works-metric">
+        <strong>97.7<span>%</span></strong>
+        <small>MVTec-AD<br>image-level AUROC</small>
+      </div>
+      <div class="works-metric">
+        <strong>0<span> training</span></strong>
+        <small>Single ViT backbone<br>without manual config</small>
+      </div>
+    </div>
+    <p class="works-spotlight__cta">
+      <a href="https://imrton.github.io/%E8%AB%96%E6%96%87/DuoAD/" class="btn">Project Page</a>
+      <a href="https://arxiv.org/abs/2607.23924" class="btn btn--duoad-secondary">arXiv</a>
+      <a href="https://github.com/inventec-ai-center/DuoAD" class="btn btn--duoad-secondary">GitHub</a>
+    </p>
+  </div>
+  <div class="works-spotlight__media works-spotlight__media--duoad">
+    <figure>
+      <a href="/assets/imgs/Papers/DuoAD/teaser.jpg"><img src="/assets/imgs/Papers/DuoAD/teaser.jpg" alt="DuoAD 利用 CLS token 的語意穩定性與結構敏感性進行異常檢測"></a>
+      <figcaption>一個 <code>[CLS]</code> token，兩種互補特性</figcaption>
+    </figure>
+    <figure>
+      <a href="/assets/imgs/Papers/DuoAD/framework.jpg"><img src="/assets/imgs/Papers/DuoAD/framework.jpg" alt="DuoAD 自校準資料增強與 attention 引導異常檢測流程"></a>
+      <figcaption>Self-Calibrated Augmentation 與 Attention-Guided Reweighting</figcaption>
+    </figure>
+  </div>
+</article>
+
 <article class="works-spotlight works-spotlight--lssgen">
   <div class="works-spotlight__body">
     <p class="works-kicker">Published Research · ICCVW 2025</p>
