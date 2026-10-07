@@ -16,7 +16,7 @@ comments: false
   <div class="about-hero__body">
     <h1>阿湯</h1>
     <p class="about-hero__role">AI Research Engineer · Inventec AI Center</p>
-    <p class="about-hero__lead">專注於電腦視覺與生成式 AI 的研究與落地，涵蓋影像辨識、影像生成與 Agentic AI，具備從演算法設計、論文發表到產品部署的完整經驗。另熟悉圖學、Unity、3D 建模、3D 列印與電路設計，能以跨領域的角度解決問題。</p>
+    <p class="about-hero__lead">專注於電腦視覺與生成式 AI 的研究與落地，涵蓋影像辨識、影像生成與 Agentic AI，具備從演算法設計、論文發表到產品部署的完整經驗。另熟悉 Camera、圖學、Unity、3D 建模、3D 列印與電路設計，能以跨領域的角度解決問題。</p>
     <div class="about-hero__actions">
       <a href="/works/" class="btn btn--primary">查看作品集</a>
       <a href="https://github.com/ImRTon" class="btn btn--inverse"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
@@ -54,6 +54,8 @@ comments: false
       <p>Leveraging Latent Space Scaling in Flow and Diffusion for Efficient Text to Image Generation。將前期擴散移至低解析度執行，在維持生成品質的同時加速 inference。</p>
       <div class="about-pub__links">
         <a href="/%E8%AB%96%E6%96%87/LSSGen/">Project Page →</a>
+        <a href="https://arxiv.org/abs/2507.16154">arXiv →</a>
+        <a href="https://github.com/inventec-ai-center/LSSGen">GitHub →</a>
       </div>
     </article>
     <article class="about-pub about-pub--duoad">
@@ -77,9 +79,10 @@ comments: false
       <strong>AI Research Engineer</strong>
       <span>英業達 Inventec Corporation · AI Center</span>
       <ul class="about-timeline__points">
-        <li><b>免訓練瑕疵檢測，從研究到落地</b>：負責演算法從零到一的設計與實作（DuoAD 論文、專利申請中），打造免訓練、原生支援 4000×3000 以上之高解析度且可部署於 Edge 的瑕疵檢測方案，單張 NVIDIA A2000 僅需 &lt; 4 GB VRAM；封裝為 Python library 與 CLI，已導入筆電外觀與連接埠瑕疵檢測專案，Recall 達 99.9%。</li>
-        <li><b>Agentic AI 平台</b>：獨立完成前後端（FastAPI + React）與 Agent pipeline 設計，打造瑕疵檢測流程規劃 Agent 與能自行調用 AD、SAM 等模型的 CV Agent（LangChain Deep-Agents），目前為 PoC 階段。</li>
+        <li><b>免訓練瑕疵檢測，從研究到落地</b>：獨自負責演算法從零到一的設計與實作（DuoAD 論文、專利申請中），打造免訓練、原生支援 4000×3000 以上之高解析度且可部署於 Edge 的瑕疵檢測方案，單張 NVIDIA A2000 僅需 &lt; 4 GB VRAM；封裝為 Python library 與 CLI，已導入筆電外觀與伺服器連接埠瑕疵檢測專案，Recall 達 99.9% 以上。</li>
+        <li><b>Agentic AI 平台</b>：獨立完成 Agentic pipeline 和前後端（FastAPI + React）設計，讓 AI agent 能夠自行依據需求調用、撰寫多種模型（DuoAD、SAM、GroundingDINO etc.），讓 user 以自然語言完成瑕疵檢測的 pipeline 設計（LangChain Deep-Agents）。</li>
         <li><b>Diffusion 瑕疵生成</b>：提供關鍵技術指導，涵蓋訓練方法、避免 overfitting 的核心設計與模型架構，協助團隊落地瑕疵影像生成方案。</li>
+        <li><b>Diffusion 運算加速研究</b>：於 ICCVW 發表 LSSGen，一篇加速 text-to-image Diffusion Models 的研究。</li>
         <li><b>GPU 叢集維運</b>：Slurm 與 Open OnDemand 系統維護、UI/UX 優化與調校。</li>
       </ul>
     </li>
@@ -89,7 +92,7 @@ comments: false
       <span>行品 Skywatch Inc.</span>
       <ul class="about-timeline__points">
         <li>為智慧縮時演算法導入 AI，降低雜訊敏感度並最佳化執行時間與記憶體。</li>
-        <li>以 QLoRA 微調 Taiwan-LLM-7B，於 8GB 消費級顯示卡部署產品 QA 機器人。</li>
+        <li>AI 相關前研 PoC。</li>
       </ul>
     </li>
     <li>
