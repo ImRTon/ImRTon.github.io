@@ -153,6 +153,9 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - PRODUCT.md
+  - DESIGN.md
+  - AGENTS.md
 keep_files:
   - .git
   - .svn
